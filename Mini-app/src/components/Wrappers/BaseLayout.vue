@@ -28,7 +28,6 @@
   
   .layout-main {
     flex: 1; 
-    padding: 1rem;
   }
   
   .layout-footer {

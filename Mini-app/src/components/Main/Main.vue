@@ -41,7 +41,7 @@
   }
   
   .hero-content {
-    max-width: 600px;
+    max-width: 700px;
     position: relative;
     z-index: 1;
   }
@@ -61,8 +61,7 @@
     line-height: 1.2;
     margin-bottom: 1.5rem;
     background: linear-gradient(90deg, #FFFFFF 0%, #E0E0E0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   .description {
@@ -89,6 +88,12 @@
   .cta-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 7px 20px rgba(11, 217, 182, 0.4);
+  }
+  .main-img{
+    position: absolute;
+    right: 20px;
+    width: 500px;
+    height: 350px;
   }
   
   </style>

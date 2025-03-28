@@ -15,10 +15,8 @@ import Main from "../components/Main/Main.vue"
       <Main/>
     </section>
     <template #footer>
-      Ovo je footer
     </template>
   </BaseLayout>
-  <p>SASA</p>
 </template>
 
 <style scoped>
