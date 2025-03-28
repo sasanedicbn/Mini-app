@@ -18,7 +18,6 @@ import Main from "../components/Main/Main.vue"
     </template>
   </BaseLayout>
 </template>
-
 <style scoped>
 
 </style>
