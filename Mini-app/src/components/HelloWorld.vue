@@ -1,34 +1,24 @@
 <script setup>
+import BaseLayout from './Wrappers/BaseLayout.vue';
+
 
 </script>
 
 <template>
-  <div>
-    <h1>SASA</h1>
-  </div>
+  <BaseLayout>
+    <template #header>
+      Ovo je header
+    </template>
+    <section >
+      Ovo je main
+    </section>
+    <template #footer>
+      Ovo je footer
+    </template>
+  </BaseLayout>
+  <p>SASA</p>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: relative;
-  top: -10px;
-}
 
-h3 {
-  font-size: 1.2rem;
-}
-
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
 </style>
