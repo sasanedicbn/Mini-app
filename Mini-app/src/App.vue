@@ -6,6 +6,11 @@ import HelloWorld from './components/HelloWorld.vue';
   <HelloWorld/>
 </template>
 
-<style scoped>
+<style >
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
 
 </style>

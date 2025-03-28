@@ -1,5 +1,6 @@
 <script setup>
 import BaseLayout from './Wrappers/BaseLayout.vue';
+import Header from '../components/Header/Header.vue'
 
 
 </script>
@@ -7,7 +8,7 @@ import BaseLayout from './Wrappers/BaseLayout.vue';
 <template>
   <BaseLayout>
     <template #header>
-      Ovo je header
+      <Header></Header>
     </template>
     <section >
       Ovo je main
