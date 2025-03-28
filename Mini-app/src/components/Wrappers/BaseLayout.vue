@@ -26,12 +26,6 @@
     min-height: 100vh;  
   }
   
-  .layout-header {
-    background: #f8f8f8;
-    padding: 1rem;
-    border-bottom: 1px solid #ddd;
-  }
-  
   .layout-main {
     flex: 1; 
     padding: 1rem;

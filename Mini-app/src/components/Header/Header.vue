@@ -26,7 +26,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #2c3e50;
+    background-color: #324558;
     color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
@@ -46,7 +46,7 @@
   }
   
   .nav-item a {
-    color: #ecf0f1;
+    color: #f6fcfc;
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;

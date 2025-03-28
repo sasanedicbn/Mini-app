@@ -1,6 +1,7 @@
 <script setup>
 import BaseLayout from './Wrappers/BaseLayout.vue';
 import Header from '../components/Header/Header.vue'
+import Main from "../components/Main/Main.vue"
 
 
 </script>
@@ -8,10 +9,10 @@ import Header from '../components/Header/Header.vue'
 <template>
   <BaseLayout>
     <template #header>
-      <Header></Header>
+      <Header/>
     </template>
     <section >
-      Ovo je main
+      <Main/>
     </section>
     <template #footer>
       Ovo je footer
