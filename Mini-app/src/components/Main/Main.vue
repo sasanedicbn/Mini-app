@@ -24,6 +24,8 @@
     min-height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 0 5%;
     position: relative;
     overflow: hidden;
@@ -41,8 +43,11 @@
   }
   
   .hero-content {
-    max-width: 700px;
-    position: relative;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 1;
   }
   
@@ -69,7 +74,8 @@
     line-height: 1.6;
     color: #B8C2CC;
     margin-bottom: 2.5rem;
-    max-width: 500px;
+    text-align: center;
+    max-width: 650px;
   }
   
   .cta-button {

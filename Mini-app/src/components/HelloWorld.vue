@@ -12,6 +12,7 @@ import Main from "../components/Main/Main.vue"
       <Header/>
     </template>
     <section >
+      <!-- <Header/> -->
       <Main/>
     </section>
     <template #footer>
