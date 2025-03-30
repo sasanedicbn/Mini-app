@@ -1,5 +1,4 @@
 <template>
- <Header/>
     <div class="hero-section">
       <div class="hero-content">
         <h4 class="subtitle">TO-DO STATISTICS</h4>

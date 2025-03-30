@@ -1,9 +1,12 @@
 <script setup>
+import Header from './components/Header/Header.vue';
 import HelloWorld from './components/HelloWorld.vue';
+import Main from './components/Main/Main.vue';
 </script>
 
 <template>
- <router-view></router-view>
+    <Header/>
+    <router-view></router-view>
 </template>
 
 <style >

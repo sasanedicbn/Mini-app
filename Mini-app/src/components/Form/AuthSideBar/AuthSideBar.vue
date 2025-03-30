@@ -26,17 +26,17 @@ const authSideBarData = ref([
 
 <style scoped>
 .auth-sidebar {
-    background-color: #4a6bff;
+    background-color: #024F99;
     display: flex;
     flex-direction: column;
-    padding: 2rem 1.5rem;
-    min-height: 80vh;
+    padding: 0rem 1.5rem;
+    /* height: 80%; */
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 2rem;
     padding-bottom: 1rem;
