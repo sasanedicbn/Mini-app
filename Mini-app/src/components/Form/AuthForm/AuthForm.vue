@@ -12,7 +12,7 @@
               type="text" 
               id="firstname" 
               class="form-input" 
-              placeholder="Enter your name"
+              placeholder=" Enter your name"
             >
           </div>
           
@@ -22,7 +22,7 @@
               type="text" 
               id="lastname" 
               class="form-input" 
-              placeholder="Enter your last name"
+              placeholder=" Enter your last name"
             >
           </div>
         </div>
@@ -34,7 +34,7 @@
               type="password" 
               id="password" 
               class="form-input" 
-              placeholder="••••••••"
+              placeholder=" ••••••••"
             >
           </div>
         </div>
@@ -45,7 +45,7 @@
             type="tel" 
             id="phone" 
             class="form-input" 
-            placeholder="+123 456 7890"
+            placeholder=" +123 456 7890"
           >
         </div>
 
@@ -56,7 +56,7 @@
 </template>
 
 <script setup>
-import AuthSideBar from './AuthSideBar/AuthSideBar.vue'
+import AuthSideBar from '../AuthSideBar/AuthSideBar.vue'
 </script>
 
 <style scoped>
@@ -86,7 +86,7 @@ import AuthSideBar from './AuthSideBar/AuthSideBar.vue'
 }
 
 .user-form {
-    padding: 0rem 6rem;
+    padding:  1.4rem 6rem;
     display: flex;
     flex-direction: column;
 }
@@ -113,7 +113,6 @@ import AuthSideBar from './AuthSideBar/AuthSideBar.vue'
 .name-group {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1.5rem;
 }
 
 .name-input {
@@ -134,7 +133,7 @@ import AuthSideBar from './AuthSideBar/AuthSideBar.vue'
 
 .form-input {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0rem;
     border: 1px solid #e2e8f0;
     border-radius: 6px;
     font-size: 0.95rem;
@@ -168,7 +167,7 @@ import AuthSideBar from './AuthSideBar/AuthSideBar.vue'
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-self: flex-end;
+    align-self: flex-start;
 }
 
 .submit-btn:hover {

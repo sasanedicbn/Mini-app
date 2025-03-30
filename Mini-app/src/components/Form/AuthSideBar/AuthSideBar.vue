@@ -29,7 +29,7 @@ const authSideBarData = ref([
     background-color: #024F99;
     display: flex;
     flex-direction: column;
-    padding: 0rem 1.5rem;
+    padding: 1.4rem 1.5rem;
     /* height: 80%; */
     color: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import MainVue from "@/components/Main/Main.vue";
-import AuthForm from "@/components/Form/AuthForm.vue";
+import AuthForm from "@/components/Form/AuthForm/AuthForm.vue";
 
 const routes = [
   { path: "/", component: MainVue },
