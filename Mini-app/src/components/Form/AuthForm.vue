@@ -1,6 +1,6 @@
 <template>
-    <AuthSideBar/>
     <div class="form-container">
+        <AuthSideBar/>
       <form class="user-form">
         <h2 class="form-title">User Details</h2>
         
@@ -53,14 +53,18 @@
   
   <style scoped>
   .form-container {
-    max-width: 480px;
+    border: 1px solid black;
+    max-width: 800px;
     margin: 2rem auto;
-    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.75fr;
+    /* display: flex; */
+    /* padding: 1.5rem; */
     font-family: 'Inter', 'Segoe UI', sans-serif;
   }
   
   .user-form {
-    background: white;
+    background: orange;
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
