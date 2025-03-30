@@ -30,7 +30,7 @@
     align-items: center;
     padding: 1rem 2rem;
     z-index: 10;
-    color: white;
+    color: rgba(255, 255, 255, 0.973);
   }
   
   .logo {
