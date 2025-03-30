@@ -6,10 +6,10 @@
           <a href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a href="#">Statistics</a>
+          <a href="#">Log in</a>
         </li>
         <li class="nav-item">
-          <a href="#">Profile</a>
+          <a href="#">Register</a>
         </li>
       </ul>
     </nav>

@@ -8,7 +8,7 @@
           Our to-do statistics app helps you track, analyze and optimize your workflow. 
           Gain insights into your productivity patterns and achieve more in less time.
         </p> 
-        <button class="cta-button">Get started</button>
+        <button class="cta-button"><router-link to="/login">Get started</router-link></button>
       </div>
     </div>
   </template>
