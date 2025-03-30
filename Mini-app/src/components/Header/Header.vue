@@ -22,13 +22,15 @@
   
   <style scoped>
   .navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #324558;
+    z-index: 10;
     color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   .logo {
@@ -46,7 +48,7 @@
   }
   
   .nav-item a {
-    color: #f6fcfc;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     padding: 0.5rem 1rem;

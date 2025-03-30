@@ -9,14 +9,14 @@ import Main from "../components/Main/Main.vue"
 <template>
   <BaseLayout>
     <template #header>
-      <Header/>
+      <!-- <Header/> -->
     </template>
     <section >
       <!-- <Header/> -->
       <Main/>
     </section>
-    <template #footer>
-    </template>
+    <!-- <template #footer>
+    </template> -->
   </BaseLayout>
 </template>
 <style scoped>
