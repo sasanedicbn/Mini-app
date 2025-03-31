@@ -1,90 +1,79 @@
 <template>
-    <div class="main-container">
+  <div class="main-container">
     <div class="form-container">
-     <AuthSideBar/>
-      <form class="user-form">
-        <span class="current-action">Step 1/3</span>
-        <h2 class="form-title">User Details</h2>
-        <div class="name-group">
-          <div class="form-group name-input">
-            <label for="firstname">First Name</label>
-            <input 
-              type="text" 
-              id="firstname" 
-              class="form-input" 
-              placeholder=" Enter your name"
-            >
-          </div>
-          
-          <div class="form-group name-input">
-            <label for="lastname">Last Name</label>
-            <input 
-              type="text" 
-              id="lastname" 
-              class="form-input" 
-              placeholder=" Enter your last name"
-            >
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label for="password">Password</label>
-          <div class="password-wrapper">
-            <input 
-              type="password" 
-              id="password" 
-              class="form-input" 
-              placeholder=" ••••••••"
-            >
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <label for="phone">Phone</label>
-          <input 
-            type="tel" 
-            id="phone" 
-            class="form-input" 
-            placeholder=" +123 456 7890"
-          >
-        </div>
-
-        <button type="submit" class="submit-btn">Next step</button>
-      </form>
+      <AuthSideBar />
+      <!-- <span class="current-action">Step 1/3</span> -->
+      <AuthFormInput
+        :fields="fields"
+        submitText="Next step"
+        :onSubmit="handleFormSubmit"
+      />
     </div>
-    </div>
+  </div>
 </template>
-
 <script setup>
-import AuthSideBar from '../AuthSideBar/AuthSideBar.vue'
+import AuthSideBar from "../AuthSideBar/AuthSideBar.vue";
+import AuthFormInput from "./AuthFormInput.vue";
+const fields = [
+  {
+    name: "firstname",
+    label: "First Name",
+    type: "text",
+    placeholder: "Enter your name",
+    value: "",
+    halfWidth: true,
+  },
+  {
+    name: "lastname",
+    label: "Last Name",
+    type: "text",
+    placeholder: "Enter your last name",
+    value: "",
+    halfWidth: true,
+  },
+  {
+    name: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "••••••••",
+    value: "",
+  },
+  {
+    name: "phone",
+    label: "Phone",
+    type: "tel",
+    placeholder: "+123 456 7890",
+    value: "",
+  },
+];
 </script>
 
 <style scoped>
-.main-container{
+.main-container {
   width: 100%;
   height: 100vh;
-  background-color: #0B192E;
+  background-color: #0b192e;
   display: flex;
   align-items: center;
 }
 .form-container {
-    margin:0 auto;
-    margin-top: 10rem;
-    margin-bottom: 6rem;
-    max-width: 900px;
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    background: white;
-    height: 550px;
-    /* min-height: 600px; */
-    /* min-height: 400px;
+  margin: 0 auto;
+  margin-top: 10rem;
+  margin-bottom: 6rem;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  background: white;
+  height: 550px;
+  /* min-height: 600px; */
+  /* min-height: 400px;
     max-height:800px; */
 }
-
+/*
 .user-form {
     padding:  1.4rem 6rem;
     display: flex;
@@ -182,8 +171,8 @@ import AuthSideBar from '../AuthSideBar/AuthSideBar.vue'
 .current-action{
     text-align: left;
     margin-bottom: 4px;
-}
-.current-action{
-    color: grey;
+} */
+.current-action {
+  color: grey;
 }
 </style>
