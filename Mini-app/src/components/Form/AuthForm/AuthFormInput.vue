@@ -1,11 +1,6 @@
 <template>
   <form @submit.prevent="handleSubmit" class="user-form">
-    <div
-      v-for="field in fields"
-      :key="field.name"
-      class="form-group"
-      :class="{ 'half-width': field.halfWidth }"
-    >
+    <div v-for="field in fields" :key="field.name" class="form-group">
       <label :for="field.name">{{ field.label }}</label>
       <input
         v-model="field.value"
@@ -55,20 +50,17 @@ const handleSubmit = () => {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
+  padding: 1.4rem 2.5rem;
   /* background-color: red; */
-  width: 600px;
+  width: 80%;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.form-group.half-width {
-  width: 48%;
 }
 
 .form-input {

@@ -3,6 +3,10 @@
     <div class="form-container">
       <AuthSideBar />
       <!-- <span class="current-action">Step 1/3</span> -->
+      <p>Basic info</p>
+      <p>
+        Tell us a bit about yourself to get started with your new CRM account
+      </p>
       <AuthFormInput
         :fields="fields"
         submitText="Next step"
@@ -69,6 +73,7 @@ const fields = [
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   background: white;
   height: 550px;
+  width: 750px;
   /* min-height: 600px; */
   /* min-height: 400px;
     max-height:800px; */
