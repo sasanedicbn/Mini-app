@@ -1,9 +1,5 @@
 <template>
   <form @submit.prevent="handleSubmit" class="user-form">
-    <TextBlock
-      title="Basic info"
-      subTitle=" Tell us a bit about yourself to get started with your new CRM account"
-    />
     <div v-for="field in fields" :key="field.name" class="form-group">
       <label :for="field.name">{{ field.label }}</label>
       <input
@@ -57,9 +53,6 @@ const handleSubmit = () => {
   gap: 0.8rem;
   max-width: 700px;
   margin: 0 auto;
-  padding: 1.4rem 2.5rem;
-  /* background-color: red; */
-  width: 80%;
 }
 
 .form-group {
@@ -82,7 +75,7 @@ const handleSubmit = () => {
   box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.1);
 }
 .form-group label {
-  color: rgba(209, 209, 209, 0.95);
+  color: rgb(70, 66, 66);
 }
 .submit-btn {
   margin-top: 1.25rem;

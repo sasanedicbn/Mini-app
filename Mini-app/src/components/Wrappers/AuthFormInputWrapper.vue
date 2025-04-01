@@ -1,12 +1,11 @@
 <template>
-  <div class="wrapper">
-    <slot></slot>
-    <slot name="subtitle"></slot>
+  <div class="authForm-wrapper">
+    <slot name="form"></slot>
   </div>
 </template>
 
 <style scoped>
-.wrapper {
+.authForm-wrapper {
   border: 1px solid #ddd;
   padding: 1rem;
   border-radius: 8px;

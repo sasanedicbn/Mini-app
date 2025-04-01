@@ -31,20 +31,24 @@ defineProps({
 <style scoped>
 .text-block {
   font-family: sans-serif;
-  line-height: 1.5;
-  margin-bottom: 0.8rem;
+  line-height: 1.2;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(218, 208, 208, 0.7);
+  margin-bottom: 1.5rem;
+  margin-top: 0.8rem;
 }
 
 .title {
   font-weight: 600;
-  margin: 0 0 0.25rem 0;
+  line-height: 1.2;
   color: rgb(56, 63, 75);
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
   margin: 0;
-  color: rgba(40, 40, 46, 0.47);
+  color: rgb(70, 66, 66);
   font-size: 1rem;
   opacity: 0.9;
 }
