@@ -42,7 +42,7 @@ defineProps({
   font-weight: 600;
   line-height: 1.2;
   color: rgb(56, 63, 75);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 

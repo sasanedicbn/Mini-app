@@ -2,18 +2,20 @@
   <div class="main-container">
     <div class="form-container">
       <AuthSideBar />
-      <div class="wrapper">
-        <span class="current-action">Page 1/3</span>
-        <TextBlock
-          title="Basic info"
-          subTitle=" Tell us a bit about yourself to get started with your new CRM account"
-        />
-        <AuthFormInput
-          :fields="fields"
-          submitText="Next step"
-          :onSubmit="handleFormSubmit"
-        />
-      </div>
+      <AuthFormInputWrapper>
+        <template #form>
+          <span class="current-action">Page 1/3</span>
+          <TextBlock
+            title="Basic info"
+            subTitle=" Tell us a bit about yourself to get started with your new CRM account"
+          />
+          <AuthFormInput
+            :fields="fields"
+            submitText="Next step"
+            :onSubmit="handleFormSubmit"
+          />
+        </template>
+      </AuthFormInputWrapper>
     </div>
   </div>
 </template>
@@ -21,6 +23,7 @@
 import AuthSideBar from "../AuthSideBar/AuthSideBar.vue";
 import AuthFormInput from "./AuthFormInput.vue";
 import TextBlock from "@/components/UX/TextBlock.vue";
+import AuthFormInputWrapper from "@/components/Wrappers/Auth/AuthFormInputWrapper.vue";
 const fields = [
   {
     name: "firstname",
@@ -45,21 +48,10 @@ const fields = [
     placeholder: "••••••••",
     value: "",
   },
-  // {
-  //   name: "phone",
-  //   label: "Phone",
-  //   type: "tel",
-  //   placeholder: "+123 456 7890",
-  //   value: "",
-  // },
 ];
 </script>
 
 <style scoped>
-.wrapper {
-  margin: 0 auto;
-  padding: 4rem 5rem;
-}
 .main-container {
   width: 100%;
   height: 100vh;
@@ -79,8 +71,7 @@ const fields = [
   overflow: hidden;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   background: white;
-  height: 580px;
-  width: 800px;
+  min-width: 500px;
 }
 
 .current-action {
