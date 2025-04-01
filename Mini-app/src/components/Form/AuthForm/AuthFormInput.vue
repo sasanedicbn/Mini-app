@@ -1,5 +1,9 @@
 <template>
   <form @submit.prevent="handleSubmit" class="user-form">
+    <TextBlock
+      title="Basic info"
+      subTitle=" Tell us a bit about yourself to get started with your new CRM account"
+    />
     <div v-for="field in fields" :key="field.name" class="form-group">
       <label :for="field.name">{{ field.label }}</label>
       <input
@@ -18,6 +22,7 @@
 </template>
 
 <script setup>
+import TextBlock from "@/components/UX/TextBlock.vue";
 const props = defineProps({
   fields: {
     type: Array,
@@ -49,7 +54,7 @@ const handleSubmit = () => {
 .user-form {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 0.8rem;
   max-width: 700px;
   margin: 0 auto;
   padding: 1.4rem 2.5rem;
@@ -76,9 +81,11 @@ const handleSubmit = () => {
   border-color: #4a6bff;
   box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.1);
 }
-
+.form-group label {
+  color: rgba(209, 209, 209, 0.95);
+}
 .submit-btn {
-  margin-top: 1rem;
+  margin-top: 1.25rem;
   padding: 0.85rem 1.5rem;
   background-color: #4a6bff;
   color: white;
@@ -88,6 +95,8 @@ const handleSubmit = () => {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
+  width: 50%;
+  margin: 0 right;
 }
 
 .submit-btn:hover {
