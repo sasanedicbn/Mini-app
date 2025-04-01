@@ -3,12 +3,15 @@
     <div class="form-container">
       <AuthSideBar />
       <AuthFormInputWrapper>
-        <template #form>
+        <template #header>
           <span class="current-action">Page 1/3</span>
           <TextBlock
             title="Basic info"
-            subTitle=" Tell us a bit about yourself to get started with your new CRM account"
+            subTitle="Tell us a bit about yourself..."
           />
+        </template>
+
+        <template #content>
           <AuthFormInput
             :fields="fields"
             submitText="Next step"
