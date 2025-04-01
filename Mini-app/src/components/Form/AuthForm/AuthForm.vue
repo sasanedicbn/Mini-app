@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="form-container">
       <AuthSideBar />
-      <AuthFormInputWrapper>
+      <!-- <AuthFormInputWrapper>
         <template #header>
           <span class="current-action">Page 1/3</span>
           <TextBlock
@@ -18,7 +18,7 @@
             :onSubmit="handleFormSubmit"
           />
         </template>
-      </AuthFormInputWrapper>
+      </AuthFormInputWrapper> -->
     </div>
   </div>
 </template>
