@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="form-container">
       <AuthSideBar />
-      <!-- <AuthFormInputWrapper>
+      <AuthFormInputWrapper>
         <template #header>
           <span class="current-action">Page 1/3</span>
           <TextBlock
@@ -18,7 +18,7 @@
             :onSubmit="handleFormSubmit"
           />
         </template>
-      </AuthFormInputWrapper> -->
+      </AuthFormInputWrapper>
     </div>
   </div>
 </template>
@@ -63,9 +63,7 @@ const fields = [
   align-items: center;
 }
 .form-container {
-  margin: 0 auto;
-  margin-top: 10rem;
-  margin-bottom: 6rem;
+  width: 55%;
   max-width: 900px;
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -74,7 +72,7 @@ const fields = [
   overflow: hidden;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
   background: white;
-  min-width: 500px;
+  margin: 0 auto;
 }
 
 .current-action {
