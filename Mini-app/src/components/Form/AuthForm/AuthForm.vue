@@ -4,18 +4,18 @@
       <AuthSideBar />
       <AuthFormInputWrapper>
         <template #header>
-          <span class="current-action">Page {{ currentStep }}/3</span>
+          <span class="current-action">Page 1/3</span>
           <TextBlock
-            :title="steps[currentStep - 1].title"
-            :subTitle="steps[currentStep - 1].subtitle"
+            title="Basic info"
+            subTitle="Tell us a bit about yourself..."
           />
         </template>
 
         <template #content>
           <AuthFormInput
-            :fields="steps[currentStep - 1].fields"
-            :submitText="currentStep === 3 ? 'Complete' : 'Next step'"
-            @submit="handleFormSubmit"
+            :fields="fields"
+            submitText="Next step"
+            :onSubmit="handleFormSubmit"
           />
         </template>
       </AuthFormInputWrapper>
@@ -50,77 +50,6 @@ const fields = [
     type: "password",
     placeholder: "••••••••",
     value: "",
-  },
-];
-
-const steps = [
-  {
-    title: "Basic info",
-    subtitle: "Tell us a bit about yourself...",
-    fields: [
-      {
-        name: "firstname",
-        label: "First Name",
-        type: "text",
-        placeholder: "Enter your name",
-        value: "",
-        halfWidth: true,
-      },
-      {
-        name: "lastname",
-        label: "Last Name",
-        type: "text",
-        placeholder: "Enter your last name",
-        value: "",
-        halfWidth: true,
-      },
-      {
-        name: "password",
-        label: "Password",
-        type: "password",
-        placeholder: "••••••••",
-        value: "",
-      },
-    ],
-  },
-  {
-    title: "Contact details",
-    subtitle: "How can we reach you?",
-    fields: [
-      {
-        name: "email",
-        label: "Email",
-        type: "email",
-        placeholder: "Enter your email",
-        value: "",
-      },
-      {
-        name: "phone",
-        label: "Phone Number",
-        type: "tel",
-        placeholder: "Enter your phone number",
-        value: "",
-      },
-    ],
-  },
-  {
-    title: "Final step",
-    subtitle: "Almost there!",
-    fields: [
-      {
-        name: "username",
-        label: "Username",
-        type: "text",
-        placeholder: "Choose a username",
-        value: "",
-      },
-      {
-        name: "terms",
-        label: "I agree to terms and conditions",
-        type: "checkbox",
-        value: false,
-      },
-    ],
   },
 ];
 </script>

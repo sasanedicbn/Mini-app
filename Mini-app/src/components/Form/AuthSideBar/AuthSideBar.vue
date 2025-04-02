@@ -1,6 +1,6 @@
 <template>
   <div class="auth-sidebar">
-    <h4 class="sidebar-title">TO-DO STATISTICS</h4>
+    <h4 class="sidebar-title">Register</h4>
     <SideBarAction
       v-for="(item, index) in authSideBarData"
       :key="index"
@@ -52,6 +52,7 @@ const authSideBarData = ref([
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 2px;
 }
 
 .copyright {
