@@ -4,18 +4,18 @@
       <AuthSideBar />
       <AuthFormInputWrapper>
         <template #header>
-          <span class="current-action">Page 1/3</span>
+          <span class="current-action">Page {{ currentStep }}/3</span>
           <TextBlock
-            title="Basic info"
-            subTitle="Tell us a bit about yourself..."
+            :title="steps[currentStep - 1].title"
+            :subTitle="steps[currentStep - 1].subtitle"
           />
         </template>
 
         <template #content>
           <AuthFormInput
-            :fields="fields"
-            submitText="Next step"
-            :onSubmit="handleFormSubmit"
+            :fields="steps[currentStep - 1].fields"
+            :submitText="currentStep === 3 ? 'Complete' : 'Next step'"
+            @submit="handleFormSubmit"
           />
         </template>
       </AuthFormInputWrapper>
