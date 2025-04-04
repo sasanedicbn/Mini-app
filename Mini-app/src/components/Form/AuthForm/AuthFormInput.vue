@@ -11,7 +11,12 @@
         :required="field.required"
       />
     </div>
-    <button ty
+    <button type="submit" class="submit-btn">
+      {{ submitText }}
+    </button>
+  </form>
+</template>
+
 <script setup>
 import TextBlock from "@/components/UX/TextBlock.vue";
 const props = defineProps({
