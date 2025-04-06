@@ -55,5 +55,11 @@ const authSideBarData = ref([
   letter-spacing: 2px;
 }
 
-
+.copyright {
+  margin-top: auto;
+  padding: 1rem 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 </style>
