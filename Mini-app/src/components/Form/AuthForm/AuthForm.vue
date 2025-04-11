@@ -14,12 +14,7 @@
         <template #content>
           <AuthFormInput
             :fields="fields"
-            submitText="Next step"
-            :onSubmit="handleFormSubmit"
-          />
-        </template>
-      </AuthFormInputWrapper>
-    </div>
+            submitText="Next s
   </div>
 </template>
 <script setup>
