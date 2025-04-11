@@ -69,7 +69,10 @@
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1.
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #FFFFFF 0%, #E0E0E0 100%);
+    background-clip: text;
+  }
   
   .description {
     font-size: 1.2rem;
