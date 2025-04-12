@@ -32,11 +32,6 @@ const props = defineProps({
     border-bottom: none;
 }
 
-.sidebar-action:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-    padding-left: 6px;
-}
 
 .icon-wrapper {
     width: 40px;
