@@ -11,11 +11,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
-    icon: Function,
-    title: String,
-    description: String
-});
+const props 
 </script>
 
 <style scoped>
