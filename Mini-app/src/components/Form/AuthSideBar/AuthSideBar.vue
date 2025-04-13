@@ -22,16 +22,19 @@ const authSideBarData = ref([
     icon: User,
     title: "Your personal details",
     description: "Personal details of user",
+    active: true,
   },
   {
     icon: Building,
     title: "Your company details",
     description: "Company basic information",
+    active: true,
   },
   {
     icon: Shield,
     title: "Your role",
     description: "User role in the platform",
+    active: true,
   },
 ]);
 </script>
@@ -47,6 +50,13 @@ const authSideBarData = ref([
 }
 
 .sidebar-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 2px;
+}
 
 .copyright {
   margin-top: auto;
