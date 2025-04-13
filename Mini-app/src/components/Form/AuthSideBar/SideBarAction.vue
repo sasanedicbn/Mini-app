@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar-action">
+    <div class="sidebar-action" @click="$emit('click')">
       <div class="icon-wrapper">
         <component :is="icon" size="20" class="icon" />
       </div>
@@ -14,8 +14,11 @@
 const props = defineProps({
     icon: Function,
     title: String,
-    description: String
+    description: String,
+    active:Boolean,
 });
+// console.log(active, 'ovo je active')
+defineEmits(['click']);
 </script>
 
 <style scoped>
