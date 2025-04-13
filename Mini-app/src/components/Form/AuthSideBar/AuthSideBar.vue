@@ -7,6 +7,7 @@
       :icon="item.icon"
       :title="item.title"
       :description="item.description"
+      @click="setActive(index)"
     />
     <p class="copyright">All rights reserved @TO-DO STATISTICS</p>
   </div>
@@ -28,15 +29,21 @@ const authSideBarData = ref([
     icon: Building,
     title: "Your company details",
     description: "Company basic information",
-    active: true,
+    active: false,
   },
   {
     icon: Shield,
     title: "Your role",
     description: "User role in the platform",
-    active: true,
+    active: false,
   },
 ]);
+
+const setActive = (index) => {
+  authSideBarData.value.forEach((item,i) => {
+    item.active = i === index
+  });
+}
 </script>
 
 <style scoped>
