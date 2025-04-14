@@ -6,6 +6,7 @@
       :key="index"
       :icon="item.icon"
       :title="item.title"
+      :active="item.active"
       :description="item.description"
       @click="setActive(index)"
     />

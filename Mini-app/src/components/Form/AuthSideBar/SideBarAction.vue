@@ -1,5 +1,5 @@
 <template>
-    <div class="sidebar-action" @click="$emit('click')">
+    <div :class="['sidebar-action', {'sidebar-action-active': active }]" @click="$emit('click')">
       <div class="icon-wrapper">
         <component :is="icon" size="20" class="icon" />
       </div>
@@ -17,7 +17,8 @@ const props = defineProps({
     description: String,
     active:Boolean,
 });
-// console.log(active, 'ovo je active')
+console.log('Active prop:', props.active);
+
 defineEmits(['click']);
 </script>
 
@@ -35,7 +36,12 @@ defineEmits(['click']);
     border-bottom: none;
 }
 
-.sidebar-action:hover {
+/* .sidebar-action:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+    padding-left: 6px;
+} */
+.sidebar-action-active {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
     padding-left: 6px;
