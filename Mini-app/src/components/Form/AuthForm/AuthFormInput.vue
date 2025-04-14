@@ -2,14 +2,20 @@
   <form @submit.prevent="handleSubmit" class="user-form">
     <div v-for="field in fields" :key="field.name" class="form-group">
       <label :for="field.name">{{ field.label }}</label>
-      <input
+      <component :is="field.type === 'radio' ? RadioGroupInput : 'input'"
+        v-model="field.value"
+        v-bind="field.props || {}"
+        :type="field.type !== 'radio' ? field.type : undefined"
+         class="form-input"
+        :placeholder="field.placeholder"/>
+      <!-- <input
         v-model="field.value"
         :type="field.type"
         :id="field.name"
         class="form-input"
         :placeholder="field.placeholder"
         :required="field.required"
-      />
+      /> -->
     </div>
     <button type="submit" class="submit-btn">
       {{ submitText }}
@@ -19,6 +25,7 @@
 
 <script setup>
 import TextBlock from "@/components/UX/TextBlock.vue";
+import RadioGroupInput from "./RadioGroupInput.vue";
 const props = defineProps({
   fields: {
     type: Array,

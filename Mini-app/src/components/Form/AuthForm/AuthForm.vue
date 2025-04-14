@@ -52,28 +52,25 @@ import AuthFormInputWrapper from "@/components/Wrappers/Auth/AuthFormInputWrappe
 //     value: "",
 //   },
 // ];
-
 const fields = [
   {
     name: "companyname",
-    label: "Company Name",
     type: "text",
-    placeholder: "Enter company name",
-    value: "",
-    halfWidth: true,
+    label: "Company Name",
+    placeholder: "Enter company name"
   },
   {
     name: "companysize",
-    label: "Company Size",
     type: "radio",
     label: "Company Size",
-    type: "radio",
-    label: "Company Size",
-    type: "radio",
-    placeholder: "Enter company name",
-    value: "",
-    halfWidth: true,
-  },
+    props: {  
+      options: [
+        { value: "small", label: "Small" },
+        { value: "medium", label: "Medium" },
+        { value: "large", label: "Large" }
+      ]
+    }
+  }
 ];
 
 </script>
