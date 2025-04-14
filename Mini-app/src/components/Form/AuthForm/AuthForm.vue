@@ -77,7 +77,7 @@ const fields = [
     label: "Industry",
     placeholder: "Enter your industry"
   },
-];
+]
 
 </script>
 
