@@ -27,31 +27,55 @@ import AuthSideBar from "../AuthSideBar/AuthSideBar.vue";
 import AuthFormInput from "./AuthFormInput.vue";
 import TextBlock from "@/components/UX/TextBlock.vue";
 import AuthFormInputWrapper from "@/components/Wrappers/Auth/AuthFormInputWrapper.vue";
+// const fields = [
+//   {
+//     name: "firstname",
+//     label: "First Name",
+//     type: "text",
+//     placeholder: "Enter your name",
+//     value: "",
+//     halfWidth: true,
+//   },
+//   {
+//     name: "lastname",
+//     label: "Last Name",
+//     type: "text",
+//     placeholder: "Enter your last name",
+//     value: "",
+//     halfWidth: true,
+//   },
+//   {
+//     name: "password",
+//     label: "Password",
+//     type: "password",
+//     placeholder: "••••••••",
+//     value: "",
+//   },
+// ];
+
 const fields = [
   {
-    name: "firstname",
-    label: "First Name",
+    name: "companyname",
+    label: "Company Name",
     type: "text",
-    placeholder: "Enter your name",
+    placeholder: "Enter company name",
     value: "",
     halfWidth: true,
   },
   {
-    name: "lastname",
-    label: "Last Name",
-    type: "text",
-    placeholder: "Enter your last name",
+    name: "companysize",
+    label: "Company Size",
+    type: "radio",
+    label: "Company Size",
+    type: "radio",
+    label: "Company Size",
+    type: "radio",
+    placeholder: "Enter company name",
     value: "",
     halfWidth: true,
-  },
-  {
-    name: "password",
-    label: "Password",
-    type: "password",
-    placeholder: "••••••••",
-    value: "",
   },
 ];
+
 </script>
 
 <style scoped>

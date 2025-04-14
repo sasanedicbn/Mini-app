@@ -36,11 +36,6 @@ defineEmits(['click']);
     border-bottom: none;
 }
 
-/* .sidebar-action:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateX(5px);
-    padding-left: 6px;
-} */
 .sidebar-action-active {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateX(5px);
