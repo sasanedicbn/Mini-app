@@ -70,7 +70,13 @@ const fields = [
         { value: "large", label: "Large" }
       ]
     }
-  }
+  },
+  {
+    name: "industry",
+    type: "text",
+    label: "Industry",
+    placeholder: "Enter your industry"
+  },
 ];
 
 </script>
