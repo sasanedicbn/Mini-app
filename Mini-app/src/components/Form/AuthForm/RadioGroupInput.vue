@@ -12,7 +12,7 @@
           :value="option.value"
           :name="name"
         />
-        <span class="custom-radio"></span>
+        <!-- <span class="custom-radio"></span> -->
         {{ option.label }}
       </label>
     </div>
@@ -43,7 +43,6 @@
   
   .radio-option {
     position: relative;
-    padding-left: 32px;
     cursor: pointer;
     font-size: 16px;
     color: #333;
@@ -53,8 +52,9 @@
   }
   
   .radio-option input {
-    position: absolute;
-    opacity: 0;
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
     cursor: pointer;
   }
   
