@@ -15,26 +15,9 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
 import SideBarAction from "./SideBarAction.vue";
-import { User, Building, Shield } from "lucide-vue-next";
 import { authSideBarData } from "@/data/login/LogInData";
 
-// const authSideBarData = ref([
-//   {
-//     icon: User,
-//     title: "Your personal details",
-//     description: "Personal details of user",
-//     active: true,
-//   },
-//   {
-//     icon: Building,
-//     title: "Your company details",
-//     description: "Company basic information",
-//     active: false,
-//   },
-
-// ]);
 
 const setActive = (index) => {
   authSideBarData.value.forEach((item,i) => {
