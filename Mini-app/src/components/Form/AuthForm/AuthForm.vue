@@ -27,42 +27,35 @@ import AuthSideBar from "../AuthSideBar/AuthSideBar.vue";
 import AuthFormInput from "./AuthFormInput.vue";
 import TextBlock from "@/components/UX/TextBlock.vue";
 import AuthFormInputWrapper from "@/components/Wrappers/Auth/AuthFormInputWrapper.vue";
-// const fields = [
-//   {
-//     name: "firstname",
-//     label: "First Name",
-//     type: "text",
-//     placeholder: "Enter your name",
-//     value: "",
-//     halfWidth: true,
-//   },
-//   {
-//     name: "lastname",
-//     label: "Last Name",
-//     type: "text",
-//     placeholder: "Enter your last name",
-//     value: "",
-//     halfWidth: true,
-//   },
-//   {
-//     name: "password",
-//     label: "Password",
-//     type: "password",
-//     placeholder: "••••••••",
-//     value: "",
-//   },
-// ];
 const fields = [
+  {
+    name: "firstname",
+    label: "First Name",
+    type: "text",
+    placeholder: "Enter your name",
+    value: "",
+    halfWidth: true,
+  },
+  {
+    name: "lastname",
+    label: "Last Name",
+    type: "text",
+    placeholder: "Enter your last name",
+    value: "",
+    halfWidth: true,
+  },
   {
     name: "companyname",
     type: "text",
     label: "Company Name",
-    placeholder: "Enter company name"
+    placeholder: "Enter company name",
+    value: ""
   },
   {
     name: "companysize",
     type: "radio",
     label: "Company Size",
+    value: "",
     props: {  
       options: [
         { value: "small", label: "Small" },
@@ -75,9 +68,18 @@ const fields = [
     name: "industry",
     type: "text",
     label: "Industry",
-    placeholder: "Enter your industry"
+    placeholder: "Enter your industry",
+    value: ""
   },
-]
+  {
+    name: "password",
+    label: "Password",
+    type: "password",
+    placeholder: "••••••••",
+    value: "",
+  },
+];
+
 
 </script>
 
