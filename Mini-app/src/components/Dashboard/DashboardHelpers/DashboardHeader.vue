@@ -17,11 +17,11 @@
           <span class="notification-badge">3</span>
         </button>
         <div class="user-profile">
-          <img
+          <!-- <img
             src="@/assets/images/avatar.jpg"
             alt="User Avatar"
             class="avatar"
-          />
+          /> -->
           <span class="user-name">John Doe</span>
           <i class="fas fa-chevron-down"></i>
         </div>

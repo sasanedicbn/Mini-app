@@ -1,7 +1,7 @@
 <template>
   <aside class="dashboard-sidebar">
     <div class="sidebar-logo">
-      <img src="@/assets/images/logo.svg" alt="Company Logo" />
+      <!-- <img src="@/assets/images/logo.svg" alt="Company Logo" /> -->
     </div>
     <nav class="sidebar-nav">
       <ul>

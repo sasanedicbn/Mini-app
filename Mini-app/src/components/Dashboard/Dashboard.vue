@@ -1,3 +1,62 @@
 <template>
-    <h1>Hello from Dashboard</h1>
+  <div class="dashboard-container">
+    <DashboardHeader />
+    <div class="dashboard-content">
+      <DashboardSidebar />
+      <!-- <main class="main-content">
+        <DashboardBreadcrumbs />
+        <div class="dashboard-grid">
+          <DashboardStats />
+          <DashboardChart />
+          <DashboardRecentActivity />
+          <DashboardQuickActions />
+          <DashboardDataTable />
+        </div>
+      </main> -->
+    </div>
+  </div>
 </template>
+
+<script setup>
+import DashboardHeader from "@/components/Dashboard/DashboardHelpers/DashboardHeader.vue";
+import DashboardSidebar from "@/components/Dashboard/DashboardHelpers/DashboardSidebar.vue";
+// import DashboardBreadcrumbs from "./DashboardBreadcrumbs.vue";
+// import DashboardStats from "./DashboardStats.vue";
+// import DashboardChart from "./DashboardChart.vue";
+// import DashboardRecentActivity from "./DashboardRecentActivity.vue";
+// import DashboardQuickActions from "./DashboardQuickActions.vue";
+// import DashboardDataTable from "./DashboardDataTable.vue";
+</script>
+
+<style scoped>
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 1;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
