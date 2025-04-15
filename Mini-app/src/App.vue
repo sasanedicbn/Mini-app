@@ -5,7 +5,7 @@ import Main from './components/Main/Main.vue';
 </script>
 
 <template>
-    <Header/>
+    <!-- <Header/> -->
     <router-view></router-view>
 </template>
 
