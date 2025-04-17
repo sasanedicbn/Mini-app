@@ -3,7 +3,7 @@
     <DashboardHeader />
     <div class="dashboard-content">
       <DashboardSidebar />
-      <!-- <main class="main-content">
+      <main class="main-content">
         <DashboardBreadcrumbs />
         <div class="dashboard-grid">
           <DashboardStats />
@@ -12,7 +12,7 @@
           <DashboardQuickActions />
           <DashboardDataTable />
         </div>
-      </main> -->
+      </main>
     </div>
   </div>
 </template>
@@ -20,12 +20,12 @@
 <script setup>
 import DashboardHeader from "@/components/Dashboard/DashboardHelpers/DashboardHeader.vue";
 import DashboardSidebar from "@/components/Dashboard/DashboardHelpers/DashboardSidebar.vue";
-// import DashboardBreadcrumbs from "./DashboardBreadcrumbs.vue";
-// import DashboardStats from "./DashboardStats.vue";
-// import DashboardChart from "./DashboardChart.vue";
-// import DashboardRecentActivity from "./DashboardRecentActivity.vue";
-// import DashboardQuickActions from "./DashboardQuickActions.vue";
-// import DashboardDataTable from "./DashboardDataTable.vue";
+import DashboardBreadcrumbs from "@/components/Dashboard/DashboardHelpers/DashboardBreadcrumbs.vue";
+import DashboardStats from "@/components/Dashboard/DashboardHelpers/DashboardStats.vue";
+import DashboardChart from "@/components/Dashboard/DashboardHelpers/DashboardChart.vue";
+import DashboardRecentActivity from "@/components/Dashboard/DashboardHelpers/DashboardRecentActivity.vue";
+import DashboardQuickActions from "@/components/Dashboard/DashboardHelpers/DashboardQuickActions.vue";
+import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
 </script>
 
 <style scoped>
