@@ -146,9 +146,5 @@ const activities = [
   margin: 0;
 }
 
-@media (max-width: 1200px) {
-  .activity-container {
-    grid-column: span 12 !important;
-  }
-}
+
 </style>
