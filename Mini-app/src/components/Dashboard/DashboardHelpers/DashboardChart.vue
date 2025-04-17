@@ -100,9 +100,4 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 1200px) {
-  .chart-container {
-    grid-column: span 12 !important;
-  }
-}
 </style>
