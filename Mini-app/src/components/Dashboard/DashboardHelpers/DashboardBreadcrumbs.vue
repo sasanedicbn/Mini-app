@@ -16,20 +16,6 @@
   padding: 0.5rem 0;
 }
 
-.breadcrumb-item {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.2s;
-}
-
-.breadcrumb-item:hover:not(.active) {
-  color: #4299e1;
-}
-
-.breadcrumb-item.active {
-  color: #2d3748;
-  font-weight: 500;
-}
 
 .breadcrumb-separator {
   color: #cbd5e0;
