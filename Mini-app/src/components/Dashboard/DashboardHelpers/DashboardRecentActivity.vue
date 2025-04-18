@@ -139,3 +139,12 @@ const activities = [
   margin: 0 0 0.25rem 0;
   line-height: 1.4;
 }
+
+.activity-time {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  margin: 0;
+}
+
+
+</style>
