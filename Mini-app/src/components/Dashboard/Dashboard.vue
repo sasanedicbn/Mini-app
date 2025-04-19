@@ -60,3 +60,4 @@ import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/Dashboar
   }
 }
 </style>
+<!-- START PRACTICE VUE IN SMALL PROJECT -->
