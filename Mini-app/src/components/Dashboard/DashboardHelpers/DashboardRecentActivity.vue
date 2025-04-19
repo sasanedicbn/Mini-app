@@ -135,13 +135,7 @@ const activities = [
 
 .activity-text {
   font-size: 0.875rem;
-  color: #4a5568;
-  margin: 0 0 0.25rem 0;
-  line-height: 1.4;
-}
-
-.activity-time {
-  font-size: 0.75rem;
+  ize: 0.75rem;
   color: #a0aec0;
   margin: 0;
 }
