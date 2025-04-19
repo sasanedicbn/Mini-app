@@ -54,4 +54,9 @@ import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/Dashboar
   margin-top: 1.5rem;
 }
 
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
