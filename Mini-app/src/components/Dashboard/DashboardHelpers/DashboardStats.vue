@@ -1,6 +1,6 @@
 <template>
   <div class="stats-container" :style="{ gridColumn: 'span 3' }">
-    <div class="stat-card" v-for="stat in stats" :key="stat.title">
+    <div class="stat-card" v-for="stat in formattedStats" :key="stat.title">
       <div class="stat-icon" :style="{ backgroundColor: stat.bgColor }">
         <i :class="stat.icon"></i>
       </div>
@@ -26,9 +26,10 @@ import { useDashboardStore } from '@/store/DashboardStore'
 import { computed } from 'vue'
 
 const dashboardStore = useDashboardStore()
+console.log(dashboardStore.getFormattedStats, 'das')
+const formattedStats = computed(() => dashboardStore.getFormattedStats)
 
 
-console.log(stats, 'stats')
 
 </script>
 
