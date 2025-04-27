@@ -60,4 +60,3 @@ import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/Dashboar
   }
 }
 </style>
-<!-- TODAY WORKING IN FIGMA ON SOME PORTFOLIO PROJECT -->
