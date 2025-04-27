@@ -27,39 +27,9 @@ import { computed } from 'vue'
 
 const dashboardStore = useDashboardStore()
 
-const stats = computed(() => {
-  const overview = dashboardStore.overview
-  return [
-    {
-      title: "Total Revenue",
-      value: `$${overview.totalRevenue.toLocaleString()}`,
-      change: overview.revenueChange,
-      icon: "fas fa-dollar-sign",
-      bgColor: "#ebf8ff",
-    },
-    {
-      title: "New Projects",
-      value: overview.newProjects.toString(),
-      change: overview.projectsChange,
-      icon: "fas fa-folder-plus",
-      bgColor: "#fff5f5",
-    },
-    {
-      title: "Active Users",
-      value: overview.activeUsers.toLocaleString(),
-      change: overview.usersChange,
-      icon: "fas fa-users",
-      bgColor: "#f0fff4",
-    },
-    {
-      title: "Tasks Completed",
-      value: overview.tasksCompleted.toString(),
-      change: overview.tasksChange,
-      icon: "fas fa-check-circle",
-      bgColor: "#faf5ff",
-    },
-  ]
-})
+
+console.log(stats, 'stats')
+
 </script>
 
 <style scoped>
