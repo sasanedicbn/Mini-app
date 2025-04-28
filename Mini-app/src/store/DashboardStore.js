@@ -1,3 +1,4 @@
+import { formatedStats } from "@/data/dashboard/dashboardData";
 import { defineStore } from "pinia";
 
 export const useDashboardStore = defineStore("dashboard", {
@@ -117,37 +118,7 @@ export const useDashboardStore = defineStore("dashboard", {
   }),
 
   getters: {
-    getFormattedStats: (state) => {
-      return [
-        {
-          title: "Total Revenue",
-          value: `$${state.overview.totalRevenue.toLocaleString()}`,
-          change: state.overview.revenueChange,
-          icon: "fas fa-dollar-sign",
-          bgColor: "#ebf8ff",
-        },
-        {
-          title: "New Projects",
-          value: state.overview.newProjects.toString(),
-          change: state.overview.projectsChange,
-          icon: "fas fa-folder-plus",
-          bgColor: "#fff5f5",
-        },
-        {
-          title: "Active Users",
-          value: state.overview.activeUsers.toLocaleString(),
-          change: state.overview.usersChange,
-          icon: "fas fa-users",
-          bgColor: "#f0fff4",
-        },
-        {
-          title: "Tasks Completed",
-          value: state.overview.tasksCompleted.toString(),
-          change: state.overview.tasksChange,
-          icon: "fas fa-check-circle",
-          bgColor: "#faf5ff",
-        },
-      ];
+    getFormattedStats: formatedStats
     },
     // Getter for overview stats
     getOverviewStats: (state) => state.overview,
