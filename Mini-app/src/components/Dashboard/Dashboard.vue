@@ -6,10 +6,10 @@
       <main class="main-content">
         <DashboardBreadcrumbs />
         <div class="dashboard-grid">
-          <DashboardStats />
+          <!-- <DashboardStats />
           <DashboardChart />
-          <DashboardRecentActivity />
-          <DashboardQuickActions />
+          <DashboardRecentActivity /> -->
+          <!-- <DashboardQuickActions /> -->
           <DashboardDataTable />
         </div>
       </main>
