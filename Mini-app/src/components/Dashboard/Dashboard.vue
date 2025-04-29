@@ -11,7 +11,8 @@
           <DashboardRecentActivity />
           <DashboardQuickActions />
           <DashboardDataTable /> -->
-          <router-link></router-link>
+          <DashboardBreadcrumbs />
+        <router-view></router-view> 
         </div>
       </main>
     </div>
