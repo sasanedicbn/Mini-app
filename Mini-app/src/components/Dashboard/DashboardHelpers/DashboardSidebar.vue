@@ -27,9 +27,13 @@
 </template>
 
 <script setup>
+import { useRoute } from 'vue-router';
+
+const router = useRoute()
+
 const navItems = [
-  { name: "Dashboard", path: "/dashboard", icon: "fas fa-home", active: true },
-  { name: "Projects", path: "/projects", icon: "fas fa-folder" },
+  { name: "Dashboard", path: "/dashboard", icon: "fas fa-home", active: router.currentRoute.value.path === '/dashboard' },
+  { name: "Projects", path: "/projects", icon: "fas fa-folder", active: router.currentRoute.value.path === '/dashboard/projects'},
   { name: "Tasks", path: "/tasks", icon: "fas fa-tasks" },
   { name: "Calendar", path: "/calendar", icon: "fas fa-calendar" },
   { name: "Messages", path: "/messages", icon: "fas fa-envelope" },

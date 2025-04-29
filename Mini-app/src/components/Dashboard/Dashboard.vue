@@ -8,9 +8,10 @@
         <div class="dashboard-grid">
           <!-- <DashboardStats />
           <DashboardChart />
-          <DashboardRecentActivity /> -->
-          <!-- <DashboardQuickActions /> -->
-          <DashboardDataTable />
+          <DashboardRecentActivity />
+          <DashboardQuickActions />
+          <DashboardDataTable /> -->
+          <router-link></router-link>
         </div>
       </main>
     </div>
