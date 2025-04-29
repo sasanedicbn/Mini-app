@@ -9,6 +9,7 @@
           v-for="item in navItems"
           :key="item.name"
           :class="{ active: item.active }"
+          @click="navigate(item.path)"
         >
           <router-link :to="item.path">
             <i :class="item.icon"></i>
