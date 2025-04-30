@@ -2,17 +2,19 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import MainVue from "@/components/Main/Main.vue";
 import AuthForm from "@/components/Form/AuthForm/AuthForm.vue";
-import Dashboard from "@/components/Dashboard/Dashboard.vue";
+import Dashboard from "@/components/Dashboard/DashboardLayout.vue";
 import DashboardRecentActivity from "@/components/Dashboard/DashboardHelpers/DashboardRecentActivity.vue";
 import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
+import DashboardLayout from "@/components/Dashboard/DashboardLayout.vue";
 
 const routes = [
   { path: "/", component: MainVue },
   { path: "/login", component: AuthForm },
   {
     path: "/dashboard",
-    component: Dashboard,
+    component: DashboardLayout,
     children: [
+      { path: "", component: Dashboard },
       { path: "projects", component: DashboardDataTable },
       { path: "tasks", component: DashboardRecentActivity },
     ],
