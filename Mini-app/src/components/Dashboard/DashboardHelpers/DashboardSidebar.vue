@@ -8,8 +8,7 @@
         <li
           v-for="item in navItems"
           :key="item.name"
-          :class="{ active: item.active }"
-          @click="navigate(item.path)"
+          :class="{ active: isActive(item.path) }"
         >
           <router-link :to="item.path">
             <i :class="item.icon"></i>
@@ -28,19 +27,22 @@
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router';
+import {  useRoute } from 'vue-router';
 
-const router = useRoute()
+const route = useRoute()
 
 const navItems = [
-  { name: "Dashboard", path: "/dashboard", icon: "fas fa-home", active: router.currentRoute.value.path === '/dashboard' },
-  { name: "Projects", path: "/projects", icon: "fas fa-folder", active: router.currentRoute.value.path === '/dashboard/projects'},
+  { name: "Dashboard", path: "/dashboard", icon: "fas fa-home", },
+  { name: "Projects", path: "/projects", icon: "fas fa-folder",},
   { name: "Tasks", path: "/tasks", icon: "fas fa-tasks" },
   { name: "Calendar", path: "/calendar", icon: "fas fa-calendar" },
   { name: "Messages", path: "/messages", icon: "fas fa-envelope" },
   { name: "Reports", path: "/reports", icon: "fas fa-chart-bar" },
   { name: "Settings", path: "/settings", icon: "fas fa-cog" },
 ];
+const isActive = (path) => {
+  return route.path === path;
+};
 </script>
 
 <style scoped>
