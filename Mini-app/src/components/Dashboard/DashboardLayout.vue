@@ -5,8 +5,7 @@
       <DashboardSidebar />
       <main class="main-content">
         <DashboardBreadcrumbs />
-        <router-view to="/dashboard/projects"></router-view> 
-
+        <router-view></router-view> 
       </main>
     </div>
   </div>
