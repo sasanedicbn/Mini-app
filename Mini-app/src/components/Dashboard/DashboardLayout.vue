@@ -5,15 +5,8 @@
       <DashboardSidebar />
       <main class="main-content">
         <DashboardBreadcrumbs />
-        <div class="dashboard-grid">
-          <!-- <DashboardStats />
-          <DashboardChart />
-          <DashboardRecentActivity />
-          <DashboardQuickActions />
-          <DashboardDataTable /> -->
-          <!-- <DashboardBreadcrumbs /> -->
         <router-view to="/dashboard/projects"></router-view> 
-        </div>
+
       </main>
     </div>
   </div>
@@ -23,11 +16,7 @@
 import DashboardHeader from "@/components/Dashboard/DashboardHelpers/DashboardHeader.vue";
 import DashboardSidebar from "@/components/Dashboard/DashboardHelpers/DashboardSidebar.vue";
 import DashboardBreadcrumbs from "@/components/Dashboard/DashboardHelpers/DashboardBreadcrumbs.vue";
-import DashboardStats from "@/components/Dashboard/DashboardHelpers/DashboardStats.vue";
-import DashboardChart from "@/components/Dashboard/DashboardHelpers/DashboardChart.vue";
-import DashboardRecentActivity from "@/components/Dashboard/DashboardHelpers/DashboardRecentActivity.vue";
-import DashboardQuickActions from "@/components/Dashboard/DashboardHelpers/DashboardQuickActions.vue";
-import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
+
 </script>
 
 <style scoped>
