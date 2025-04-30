@@ -11,8 +11,8 @@
           <DashboardRecentActivity />
           <DashboardQuickActions />
           <DashboardDataTable /> -->
-          <DashboardBreadcrumbs />
-        <router-view></router-view> 
+          <!-- <DashboardBreadcrumbs /> -->
+        <router-view to="/dashboard/projects"></router-view> 
         </div>
       </main>
     </div>

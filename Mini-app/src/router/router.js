@@ -12,8 +12,10 @@ const routes = [
   {
     path: "/dashboard",
     component: Dashboard,
-    children: [{ path: "/projects", component: DashboardDataTable }],
-    children: [{ path: "/tasks", component: DashboardRecentActivity }],
+    children: [
+      { path: "projects", component: DashboardDataTable },
+      { path: "tasks", component: DashboardRecentActivity },
+    ],
   },
 ];
 
