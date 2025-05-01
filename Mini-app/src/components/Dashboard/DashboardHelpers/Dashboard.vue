@@ -1,18 +1,21 @@
 <template>
     <div class="dashboard-grid">
-    <DashboardStats />
+    <!-- <DashboardStats />
     <DashboardChart />
     <DashboardRecentActivity />
     <DashboardQuickActions />
-    <DashboardDataTable />
+    <DashboardDataTable/> -->
     <!-- <DashboardBreadcrumbs /> -->
+     <p>OVO JE DASHBOARD sa svim</p>
   </div>
 </template>
 
 <script>
-import DashboardStats from "@/components/Dashboard/DashboardHelpers/DashboardStats.vue";
-import DashboardChart from "@/components/Dashboard/DashboardHelpers/DashboardChart.vue";
-import DashboardRecentActivity from "@/components/Dashboard/DashboardHelpers/DashboardRecentActivity.vue";
-import DashboardQuickActions from "@/components/Dashboard/DashboardHelpers/DashboardQuickActions.vue";
-import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
+// import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
+import DashboardStats from "./DashboardStats.vue";
+import DashboardChart from "./DashboardChart.vue";
+import DashboardDataTable from "./DashboardDataTable.vue";
+import DashboardQuickActions from "./DashboardQuickActions.vue";
+import DashboardRecentActivity from "./DashboardRecentActivity.vue";
+
 </script>

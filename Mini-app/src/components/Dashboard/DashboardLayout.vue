@@ -5,6 +5,7 @@
       <DashboardSidebar />
       <main class="main-content">
         <DashboardBreadcrumbs />
+        <DashboardStats/>
         <router-view></router-view> 
       </main>
     </div>
@@ -15,6 +16,7 @@
 import DashboardHeader from "@/components/Dashboard/DashboardHelpers/DashboardHeader.vue";
 import DashboardSidebar from "@/components/Dashboard/DashboardHelpers/DashboardSidebar.vue";
 import DashboardBreadcrumbs from "@/components/Dashboard/DashboardHelpers/DashboardBreadcrumbs.vue";
+import DashboardStats from "./DashboardHelpers/DashboardStats.vue";
 
 </script>
 
