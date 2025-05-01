@@ -5,7 +5,6 @@
       <DashboardSidebar />
       <main class="main-content">
         <DashboardBreadcrumbs />
-        <DashboardStats/>
         <router-view></router-view> 
       </main>
     </div>
