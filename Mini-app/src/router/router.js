@@ -14,8 +14,9 @@ const routes = [
     path: "/dashboard",
     component: DashboardLayout,
     children: [
-      { path: "da", component: Dashboard },
+      { path: "", component: Dashboard },
       { path: "projects", component: DashboardDataTable },
+      { path: "message", component: DashboardRecentActivity },
       { path: "tasks", component: DashboardRecentActivity },
     ],
   },
