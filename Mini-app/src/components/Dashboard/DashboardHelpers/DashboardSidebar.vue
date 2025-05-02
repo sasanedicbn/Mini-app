@@ -8,9 +8,8 @@
         <li
           v-for="item in navItems"
           :key="item.name"
-          :class="{ active: isActive(item.path) }"
         >
-          <router-link :to="item.path">
+          <router-link :to="item.path" exact-active-class="active">
             <i :class="item.icon"></i>
             <span>{{ item.name }}</span>
           </router-link>
@@ -33,12 +32,12 @@ const route = useRoute()
 
 const navItems = [
   { name: "Dashboard", path: "/dashboard", icon: "fas fa-home", },
-  { name: "Projects", path: "/projects", icon: "fas fa-folder",},
-  { name: "Tasks", path: "/tasks", icon: "fas fa-tasks" },
-  { name: "Calendar", path: "/calendar", icon: "fas fa-calendar" },
-  { name: "Messages", path: "/messages", icon: "fas fa-envelope" },
-  { name: "Reports", path: "/reports", icon: "fas fa-chart-bar" },
-  { name: "Settings", path: "/settings", icon: "fas fa-cog" },
+  { name: "Projects", path: "/dashboard/projects", icon: "fas fa-folder",},
+  { name: "Tasks", path: "/dashboard/tasks", icon: "fas fa-tasks" },
+  { name: "Calendar", path: "/dashboard/calendar", icon: "fas fa-calendar" },
+  { name: "Messages", path: "/dashboard/messages", icon: "fas fa-envelope" },
+  { name: "Reports", path: "/dashboard/reports", icon: "fas fa-chart-bar" },
+  { name: "Settings", path: "/dashboard/settings", icon: "fas fa-cog" },
 ];
 const isActive = (path) => {
   return route.path === path;
@@ -98,11 +97,16 @@ const isActive = (path) => {
   text-align: center;
 }
 
-.sidebar-nav li.active a {
+.sidebar-nav li a.active {
   background-color: #ebf8ff;
   color: #3182ce;
   border-left: 3px solid #3182ce;
 }
+/* .active{
+  background-color: #ebf8ff;
+  color: #3182ce;
+  border-left: 3px solid #3182ce;
+} */
 
 .sidebar-footer {
   padding: 1rem;
