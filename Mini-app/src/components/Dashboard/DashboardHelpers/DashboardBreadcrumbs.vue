@@ -2,19 +2,24 @@
   <div class="breadcrumbs">
     <router-link to="/dashboard" class="breadcrumb-item">Dashboard</router-link>
     <span class="breadcrumb-separator">/</span>
-    <span class="breadcrumb-item active">Overview</span>
+    <span class="breadcrumb-item active">{{ currentPath }}</span>
   </div>
 </template>
+
 <script setup>
 import { computed } from 'vue';
-import { ref } from 'vue';
 import { useRoute } from 'vue-router';
-const route = useRoute()
-computed(() => {
-  console.log(route.path, 'route')
 
+const route = useRoute();
+
+const currentPath = computed(() => {
+ const pathRoute =  route.path.split('/').pop() 
+ if(!pathRoute ) return  'Overview'
+
+ return pathRoute.charAt(0).toUpperCase() + pathRoute.slice(1).toLowerCase()
 })
 </script>
+
 <style scoped>
 .breadcrumbs {
   display: flex;
