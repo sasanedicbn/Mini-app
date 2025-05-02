@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <DashboardHeader />
+    <DashboardHeader @toggle-sidebar="toggleSideBar" />
     <div class="dashboard-content">
       <DashboardSidebar />
       <main class="main-content">
@@ -16,7 +16,13 @@ import DashboardHeader from "@/components/Dashboard/DashboardHelpers/DashboardHe
 import DashboardSidebar from "@/components/Dashboard/DashboardHelpers/DashboardSidebar.vue";
 import DashboardBreadcrumbs from "@/components/Dashboard/DashboardHelpers/DashboardBreadcrumbs.vue";
 import DashboardStats from "./DashboardHelpers/DashboardStats.vue";
+import { ref } from "vue";
 
+const sidebar = ref(false)
+
+const toggleSideBar = (toggle) => {
+  sidebar.value = toggle
+}
 </script>
 
 <style scoped>
