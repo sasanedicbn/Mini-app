@@ -27,7 +27,6 @@ import { computed } from 'vue'
 
 const dashboardStore = useDashboardStore()
 const formattedStats = computed(() => dashboardStore.getFormattedStats)
-console.log(formattedStats, 'das')
 
 </script>
 

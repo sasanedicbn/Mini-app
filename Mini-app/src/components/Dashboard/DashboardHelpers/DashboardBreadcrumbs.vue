@@ -5,7 +5,16 @@
     <span class="breadcrumb-item active">Overview</span>
   </div>
 </template>
+<script setup>
+import { computed } from 'vue';
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+const route = useRoute()
+computed(() => {
+  console.log(route.path, 'route')
 
+})
+</script>
 <style scoped>
 .breadcrumbs {
   display: flex;
