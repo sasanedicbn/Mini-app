@@ -191,3 +191,12 @@ export const formatActivities = (activities) => {
     };
   });
 };
+export const navItems = [
+  { name: "Dashboard", path: "/dashboard", icon: "fas fa-home" },
+  { name: "Projects", path: "/dashboard/projects", icon: "fas fa-folder" },
+  { name: "Tasks", path: "/dashboard/tasks", icon: "fas fa-tasks" },
+  { name: "Calendar", path: "/dashboard/calendar", icon: "fas fa-calendar" },
+  { name: "Messages", path: "/dashboard/messages", icon: "fas fa-envelope" },
+  { name: "Reports", path: "/dashboard/reports", icon: "fas fa-chart-bar" },
+  { name: "Settings", path: "/dashboard/settings", icon: "fas fa-cog" },
+];
