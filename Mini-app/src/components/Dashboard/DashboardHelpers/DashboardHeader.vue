@@ -31,7 +31,8 @@
 </template>
 
 <script setup>
-defineEmits(["toggle-sidebar"]);
+const emit = defineEmits(['toggle-sidebar']);
+
 </script>
 
 <style scoped>
