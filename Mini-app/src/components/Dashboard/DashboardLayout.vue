@@ -20,8 +20,8 @@ import { ref } from "vue";
 
 const sidebar = ref(false)
 
-const toggleSideBar = (toggle) => {
-  sidebar.value = toggle
+const toggleSideBar = () => {
+  sidebar.value = !sidebar.value
 }
 </script>
 
