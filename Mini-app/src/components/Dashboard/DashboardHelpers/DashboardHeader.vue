@@ -1,7 +1,7 @@
 <template>
   <header class="dashboard-header">
     <div class="header-left">
-      <button class="menu-toggle" @click="$emit('toggleSideBar')">
+      <button class="menu-toggle" @click="toggleMenu">
         <i class="fas fa-bars"></i>
       </button>
       <h1 class="dashboard-title">Dashboard</h1>
