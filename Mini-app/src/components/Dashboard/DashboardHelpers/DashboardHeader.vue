@@ -33,6 +33,10 @@
 <script setup>
 const emit = defineEmits(['toggle-sidebar']);
 
+const toggleMenu = () => {
+  emit('toggle-sidebar');
+};
+
 </script>
 
 <style scoped>
