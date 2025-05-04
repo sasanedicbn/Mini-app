@@ -2,7 +2,7 @@
   <div class="dashboard-container">
     <DashboardHeader @toggle-sidebar="toggleSideBar" />
     <div class="dashboard-content">
-      <DashboardSidebar />
+      <DashboardSidebar :sidebar="sidebar" />
       <main class="main-content">
         <DashboardBreadcrumbs />
         <router-view></router-view> 
@@ -60,4 +60,3 @@ const toggleSideBar = () => {
 </style>
 
 
-<!--  working in figma for some project ux design-->
