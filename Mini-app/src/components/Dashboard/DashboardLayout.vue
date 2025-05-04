@@ -22,7 +22,6 @@ const sidebar = ref(false)
 
 const toggleSideBar = () => {
   sidebar.value = !sidebar.value
-  console.log(sidebar.value, 'vaaal')
 
 }
 </script>
