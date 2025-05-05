@@ -1,5 +1,5 @@
 <template>
-  <aside class="dashboard-sidebar">
+  <aside :class="['dashboard-sidebar', { 'show': sidebar, 'hidden': !sidebar }]>
     <div class="sidebar-logo">
       <!-- <img src="@/assets/images/logo.svg" alt="Company Logo" /> -->
     </div>
@@ -39,6 +39,13 @@ import { navItems } from '@/data/dashboard/dashboardData.js'
   height: 100vh;
   position: sticky;
   top: 0;
+}
+.hidden{
+  display: none;
+}
+
+.show{
+  display: flex;
 }
 
 .sidebar-logo {
