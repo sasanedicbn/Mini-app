@@ -48,12 +48,17 @@ const props = defineProps({
   height: 100vh;
   position: sticky;
   top: 0;
+  transition: all 0.3s ease;
 }
 .hidden{
-  display: none;
+  transform: translateX(-100%);
+  opacity: 0;
+  position: absolute;
 }
 
 .show{
+  transform: translateX(0);
+  opacity: 1;
   display: flex;
 }
 
