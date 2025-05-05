@@ -1,5 +1,5 @@
 <template>
-  <aside :class="['dashboard-sidebar', { 'show': sidebar, 'hidden': !sidebar }]>
+  <aside :class="['dashboard-sidebar', { 'show': sidebar, 'hidden': !sidebar }]">
     <div class="sidebar-logo">
       <!-- <img src="@/assets/images/logo.svg" alt="Company Logo" /> -->
     </div>
@@ -27,6 +27,15 @@
 
 <script setup>
 import { navItems } from '@/data/dashboard/dashboardData.js'
+import { computed } from 'vue';
+
+const props = defineProps({
+  sidebar: {
+    type: Boolean,
+    default: false
+  }
+})
+
 </script>
 
 <style scoped>
