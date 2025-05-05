@@ -27,7 +27,6 @@
 
 <script setup>
 import { navItems } from '@/data/dashboard/dashboardData.js'
-import { computed } from 'vue';
 
 const props = defineProps({
   sidebar: {
@@ -108,11 +107,6 @@ const props = defineProps({
   color: #3182ce;
   border-left: 3px solid #3182ce;
 }
-/* .active{
-  background-color: #ebf8ff;
-  color: #3182ce;
-  border-left: 3px solid #3182ce;
-} */
 
 .sidebar-footer {
   padding: 1rem;
