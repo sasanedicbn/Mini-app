@@ -81,61 +81,7 @@
 </template>
 
 <script setup>
-const columns = [
-  { key: "name", label: "Project Name", sortable: true },
-  { key: "client", label: "Client", sortable: true },
-  { key: "status", label: "Status", sortable: true },
-  { key: "dueDate", label: "Due Date", sortable: true },
-  { key: "progress", label: "Progress", sortable: true },
-];
 
-const data = [
-  {
-    id: 1,
-    name: "Website Redesign",
-    client: "Acme Inc.",
-    status: "Active",
-    dueDate: "Jun 15, 2023",
-    progress: 75,
-    color: "#4299e1",
-  },
-  {
-    id: 2,
-    name: "Mobile App Development",
-    client: "Tech Solutions",
-    status: "On Hold",
-    dueDate: "Jul 1, 2023",
-    progress: 30,
-    color: "#9f7aea",
-  },
-  {
-    id: 3,
-    name: "Marketing Campaign",
-    client: "Global Brands",
-    status: "Completed",
-    dueDate: "May 20, 2023",
-    progress: 100,
-    color: "#f56565",
-  },
-  {
-    id: 4,
-    name: "E-commerce Platform",
-    client: "ShopEasy",
-    status: "Active",
-    dueDate: "Aug 10, 2023",
-    progress: 45,
-    color: "#48bb78",
-  },
-  {
-    id: 5,
-    name: "CRM System",
-    client: "Business Tools",
-    status: "Active",
-    dueDate: "Jul 25, 2023",
-    progress: 60,
-    color: "#ed8936",
-  },
-];
 </script>
 
 <style scoped>
