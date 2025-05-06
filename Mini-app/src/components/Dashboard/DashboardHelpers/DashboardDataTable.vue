@@ -81,6 +81,8 @@
 </template>
 
 <script setup>
+import { columns, data } from '@/data/dashboard/dashboardData';
+
 
 </script>
 
