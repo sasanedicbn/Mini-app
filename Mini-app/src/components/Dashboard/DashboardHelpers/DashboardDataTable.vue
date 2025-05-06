@@ -3,7 +3,7 @@
     <div class="table-header">
       <h3>Recent Projects</h3>
       <div class="table-actions">
-        <button class="add-btn">
+        <button class="add-btn" v-on:click="openModalHandler">
           <i class="fas fa-plus"></i>
           Add Project
         </button>
@@ -77,12 +77,18 @@
         </button>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script setup>
 import { columns, data } from '@/data/dashboard/dashboardData';
+import { ref } from 'vue';
+const openModal = ref(false)
 
+const openModalHandler = () => {
+  openModal.value = !openModal.value;
+}
 
 </script>
 
