@@ -6,6 +6,7 @@ import Dashboard from "@/components/Dashboard/DashboardHelpers/Dashboard.vue";
 import DashboardRecentActivity from "@/components/Dashboard/DashboardHelpers/DashboardRecentActivity.vue";
 import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
 import DashboardLayout from "@/components/Dashboard/DashboardLayout.vue";
+import ActionModal from "@/components/UX/Modals/ActionModal.vue";
 
 const routes = [
   { path: "/", component: MainVue },
@@ -17,7 +18,8 @@ const routes = [
       { path: "", component: Dashboard },
       { path: "projects", component: DashboardDataTable },
       { path: "message", component: DashboardRecentActivity },
-      { path: "tasks", component: DashboardRecentActivity },
+      // { path: "tasks", component: DashboardRecentActivity },
+      { path: "tasks", component: ActionModal },
     ],
   },
 ];
