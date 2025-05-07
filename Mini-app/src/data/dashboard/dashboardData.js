@@ -256,3 +256,16 @@ export const data = [
     color: "#ed8936",
   },
 ];
+
+export const clients = [
+  { value: "Tech Solutions", label: "Tech Solutions" },
+  { value: "ShopEasy", label: "ShopEasy" },
+  { value: "Business Tools", label: "Business Tools" },
+];
+
+export const statuses = [
+  { value: "not-started", label: "Not Started" },
+  { value: "in-progress", label: "Active" },
+  { value: "on-hold", label: "On Hold" },
+  { value: "completed", label: "Completed" },
+];

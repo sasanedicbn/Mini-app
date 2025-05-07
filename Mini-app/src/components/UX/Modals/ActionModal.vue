@@ -81,6 +81,8 @@
   import BaseInput from '@/components/UX/Reusable/BaseInput.vue';
   import BaseSelect from '@/components/UX/Reusable/BaseSelect.vue';
   import BaseDatePicker from '@/components/UX/Reusable/BaseDatePicker.vue';
+  import {statuses} from '@/data/dashboard/dashboardData'
+  import {clients} from '@/data/dashboard/dashboardData'
   
   const form = ref({
     name: '',
@@ -90,18 +92,7 @@
     progress: 0
   });
   
-  const clients = [
-    { value: 'client1', label: 'Client A' },
-    { value: 'client2', label: 'Client B' },
-    { value: 'client3', label: 'Client C' }
-  ];
-  
-  const statuses = [
-    { value: 'not-started', label: 'Not Started' },
-    { value: 'in-progress', label: 'In Progress' },
-    { value: 'on-hold', label: 'On Hold' },
-    { value: 'completed', label: 'Completed' }
-  ];
+
   </script>
   
 <style scoped>
@@ -120,7 +111,8 @@
 }
 
 .form-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-bottom: 24px;
 }
