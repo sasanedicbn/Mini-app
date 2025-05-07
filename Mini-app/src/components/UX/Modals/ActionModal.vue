@@ -64,7 +64,7 @@
   
         <div class="action-buttons">
           <button class="cancel-btn">Cancel</button>
-          <button class="submit-btn">
+          <button class="submit-btn" v-on:click="submitModal">
             <span>Create Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -83,7 +83,9 @@
   import BaseDatePicker from '@/components/UX/Reusable/BaseDatePicker.vue';
   import {statuses} from '@/data/dashboard/dashboardData'
   import {clients} from '@/data/dashboard/dashboardData'
+import { useDashboardStore } from '@/store/DashboardStore';
   
+  const store = useDashboardStore()
   const form = ref({
     name: '',
     client: '',
@@ -91,7 +93,17 @@
     dueDate: '',
     progress: 0
   });
-  
+
+  const submitModal = () => {
+    console.log('Project name is:', form.value.name, 'client', form.value.client, 'status', form.value.status, 'data', form.value.dueDate,
+        'progress', form.value.progress
+    );
+    console.log(form.value)
+    store.addNewProject(form.value)
+    console.log('Svi projekti:', store.recentProjects);
+
+  }
+
 
   </script>
   

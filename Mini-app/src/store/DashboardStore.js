@@ -14,6 +14,7 @@ export const useDashboardStore = defineStore("dashboard", {
     overview: initialOverview,
     recentActivities: initialRecentActivities,
     recentProjects: initialRecentProjects,
+    // ovo gore mi je za dashboard u njega trebam dodati projekat
     quickActions: initialQuickActions,
     navigation: initialNavigation,
   }),
@@ -23,7 +24,7 @@ export const useDashboardStore = defineStore("dashboard", {
     getFormattedActivities: (state) => formatActivities(state.recentActivities),
     getOverviewStats: (state) => state.overview,
     getRecentActivities: (state) => state.recentActivities.slice(0, 5),
-    getRecentProjects: (state) => state.recentProjects.slice(0, 5),
+    getRecentProjects: (state) => state.recentProjects.slice(0, 7),
     getQuickActions: (state) => state.quickActions,
     getNavigation: (state) => state.navigation,
   },

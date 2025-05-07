@@ -27,7 +27,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in data" :key="item.id">
+          <tr v-for="item in allProjects" :key="item.id">
             <td>
               <div class="project-info">
                 <div
@@ -77,19 +77,28 @@
         </button>
       </div>
     </div>
-    
+
   </div>
 </template>
 
 <script setup>
 import { columns, data } from '@/data/dashboard/dashboardData';
+import { useDashboardStore } from '@/store/DashboardStore';
+import { watch } from 'vue';
 import { ref } from 'vue';
+const store = useDashboardStore();
+
 const openModal = ref(false)
+
+const allProjects = store.recentProjects
 
 const openModalHandler = () => {
   openModal.value = !openModal.value;
 }
 
+watch(() => {
+  console.log(data, 'data iz dashboarda')
+}, data)
 </script>
 
 <style scoped>
