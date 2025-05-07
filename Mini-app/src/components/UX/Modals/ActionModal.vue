@@ -89,6 +89,35 @@
   import {clients} from '@/data/dashboard/dashboardData'
 import { useDashboardStore } from '@/store/DashboardStore';
   
+const validateInputs = () => {
+    let isValid = true;
+    if(!form.value.name.trim()){
+     error.value.name = "Project name is required"
+     isValid = false
+    } else {
+        error.value.name = ''
+    }
+    if(!form.value.client.trim()){
+     error.value.client = "Client is required"
+     isValid = false
+    } else {
+        error.value.client = ''
+    }
+    if(!form.value.status.trim()){
+     error.value.status = "Status is required"
+     isValid = false
+    } else {
+        error.value.status = ''
+    }
+    if(!form.value.dueDate.trim()){
+     error.value.dueDate = "Date is required"
+     isValid = false
+    } else {
+        error.value.dueDate = ''
+    }
+
+return isValid;
+}
   const store = useDashboardStore()
   const form = ref({
     name: '',
@@ -106,16 +135,10 @@ import { useDashboardStore } from '@/store/DashboardStore';
   })
 
   const submitModal = () => {
-    console.log('Project name is:', form.value.name, 'client', form.value.client, 'status', form.value.status, 'data', form.value.dueDate,
-        'progress', form.value.progress
-    );
-    console.log(form.value)
+    if(!validateInputs()) return 
     store.addNewProject(form.value)
     console.log('Svi projekti:', store.recentProjects);
-
   }
-
-
   </script>
   
 <style scoped>
