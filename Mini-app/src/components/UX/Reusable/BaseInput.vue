@@ -77,5 +77,10 @@
     background: white;
     box-shadow: 0 0 0 3px rgba(58, 123, 200, 0.12);
   }
+  .input-error{
+    color: rgb(255, 45, 45);
+    margin-top: 4px;
+    margin-left: .15rem;
+  }
   </style>
   

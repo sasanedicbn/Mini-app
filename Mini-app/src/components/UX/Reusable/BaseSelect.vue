@@ -23,6 +23,7 @@
           </svg>
         </div>
       </div>
+      <p v-if="error" class="input-error">{{ error }}</p>
     </div>
   </template>
   
@@ -36,7 +37,11 @@
       type: Array,
       required: true,
       default: () => []
-    }
+    },
+    error: {
+    type:String,
+    default: '',
+  },
   });
   
   const emit = defineEmits(['update:modelValue']);
@@ -87,6 +92,11 @@
     right: 16px;
     transform: translateY(-50%);
     pointer-events: none;
+  }
+  .input-error{
+    color: rgb(255, 45, 45);
+    margin-top: 4px;
+    margin-left: .15rem;
   }
   </style>
   
