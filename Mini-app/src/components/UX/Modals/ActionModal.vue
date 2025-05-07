@@ -13,6 +13,7 @@
               label="Project Name"
               placeholder="Enter project name"
               v-model="form.name"
+              :error="error.name"
             />
           </div>
   
@@ -23,6 +24,7 @@
               placeholder="Select client"
               v-model="form.client"
               :options="clients"
+              :error="error.client"
             />
           </div>
         </div>
@@ -35,6 +37,7 @@
               placeholder="Select status"
               v-model="form.status"
               :options="statuses"
+              :error="error.status"
             />
           </div>
   
@@ -43,6 +46,7 @@
               id="dueDate"
               label="Due Date"
               v-model="form.dueDate"
+              :error="error.dueDate"
             />
           </div>
         </div>
@@ -93,6 +97,13 @@ import { useDashboardStore } from '@/store/DashboardStore';
     dueDate: '',
     progress: 0
   });
+
+  const error = ref({
+    name: '',
+    client: '',
+    status: '',
+    dueDate: '',
+  })
 
   const submitModal = () => {
     console.log('Project name is:', form.value.name, 'client', form.value.client, 'status', form.value.status, 'data', form.value.dueDate,

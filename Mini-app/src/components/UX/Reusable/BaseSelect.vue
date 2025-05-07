@@ -71,6 +71,7 @@
     height: 48px;
     appearance: none;
     box-sizing: border-box;
+    cursor: pointer;
   }
   
   .select-field:focus {

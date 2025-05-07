@@ -12,6 +12,7 @@
           :placeholder="placeholder"
         >
       </div>
+      <p v-if="error" class="input-error">{{ error }}</p>
     </div>
   </template>
   
@@ -24,7 +25,11 @@
       default: 'text',
     },
     modelValue: String,
-    placeholder: String
+    placeholder: String,
+    error: {
+        type:String,
+        default: ''
+    }
   });
   
   const emit = defineEmits(['update:modelValue']);

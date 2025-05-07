@@ -56,6 +56,7 @@ const emit = defineEmits(['update:modelValue']);
   background: #fcfcfc;
   color: #333;
   height: 48px;
+  cursor: pointer;
   box-sizing: border-box;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
