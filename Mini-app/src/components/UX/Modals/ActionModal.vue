@@ -109,18 +109,23 @@ const validationRules = {
 };
 
 const validateInputs = () => {
-    let isValid = true;
-     
-    for(validation in validationRules){
-        console.log(validation)
-        // if(!form.value[validation]){
-        //     error.value[validation] = validation.message;
-        //     isValid = false
-        // }
-    }
+  let isValid = true;
 
-    return isValid
-}
+  for (const key in validationRules) {
+    const rule = validationRules[key];
+    const value = form.value[key];
+
+    if (!rule.validate(value)) {
+      error.value[key] = rule.message;
+      isValid = false;
+    } else {
+      error.value[key] = '';
+    }
+  }
+
+  return isValid;
+};
+
 
 // const validateInputs = () => {
 //     let isValid = true;
