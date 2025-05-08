@@ -146,7 +146,6 @@ const validateInputs = () => {
   const submitModal = () => {
     if(!validateInputs()) return 
     store.addNewProject(form.value)
-    console.log('Svi projekti:', store.recentProjects);
   }
   </script>
   
