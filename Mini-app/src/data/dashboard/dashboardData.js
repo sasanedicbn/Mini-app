@@ -269,3 +269,22 @@ export const statuses = [
   { value: "on-hold", label: "On Hold" },
   { value: "completed", label: "Completed" },
 ];
+
+export const validationRules = {
+  name: {
+    message: "Project name is required",
+    validate: (val) => val.trim() !== "",
+  },
+  client: {
+    message: "Client is required",
+    validate: (val) => val.trim() !== "",
+  },
+  status: {
+    message: "Status is required",
+    validate: (val) => val.trim() !== "",
+  },
+  dueDate: {
+    message: "Date is required",
+    validate: (val) => val.trim() !== "",
+  },
+};

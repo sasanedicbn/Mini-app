@@ -87,27 +87,9 @@
   import BaseDatePicker from '@/components/UX/Reusable/BaseDatePicker.vue';
   import {statuses} from '@/data/dashboard/dashboardData'
   import {clients} from '@/data/dashboard/dashboardData'
-import { useDashboardStore } from '@/store/DashboardStore';
+  import {validationRules} from '@/data/dashboard/dashboardData'
+  import { useDashboardStore } from '@/store/DashboardStore';
   
-const validationRules = {
-  name: {
-    message: 'Project name is required',
-    validate: (val) => val.trim() !== ''
-  },
-  client: {
-    message: 'Client is required',
-    validate: (val) => val.trim() !== ''
-  },
-  status: {
-    message: 'Status is required',
-    validate: (val) => val.trim() !== ''
-  },
-  dueDate: {
-    message: 'Date is required',
-    validate: (val) => val.trim() !== ''
-  }
-};
-
 const validateInputs = () => {
   let isValid = true;
 
