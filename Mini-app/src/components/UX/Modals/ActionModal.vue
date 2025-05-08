@@ -89,35 +89,69 @@
   import {clients} from '@/data/dashboard/dashboardData'
 import { useDashboardStore } from '@/store/DashboardStore';
   
+const validationRules = {
+  name: {
+    message: 'Project name is required',
+    validate: (val) => val.trim() !== ''
+  },
+  client: {
+    message: 'Client is required',
+    validate: (val) => val.trim() !== ''
+  },
+  status: {
+    message: 'Status is required',
+    validate: (val) => val.trim() !== ''
+  },
+  dueDate: {
+    message: 'Date is required',
+    validate: (val) => val.trim() !== ''
+  }
+};
+
 const validateInputs = () => {
     let isValid = true;
-    if(!form.value.name.trim()){
-     error.value.name = "Project name is required"
-     isValid = false
-    } else {
-        error.value.name = ''
-    }
-    if(!form.value.client.trim()){
-     error.value.client = "Client is required"
-     isValid = false
-    } else {
-        error.value.client = ''
-    }
-    if(!form.value.status.trim()){
-     error.value.status = "Status is required"
-     isValid = false
-    } else {
-        error.value.status = ''
-    }
-    if(!form.value.dueDate.trim()){
-     error.value.dueDate = "Date is required"
-     isValid = false
-    } else {
-        error.value.dueDate = ''
+     
+    for(validation in validationRules){
+        console.log(validation)
+        // if(!form.value[validation]){
+        //     error.value[validation] = validation.message;
+        //     isValid = false
+        // }
     }
 
-return isValid;
+    return isValid
 }
+
+// const validateInputs = () => {
+//     let isValid = true;
+   
+//     if(!form.value.name.trim()){
+//      error.value.name = "Project name is required"
+//      isValid = false
+//     } else {
+//         error.value.name = ''
+//     }
+//     if(!form.value.client.trim()){
+//      error.value.client = "Client is required"
+//      isValid = false
+//     } else {
+//         error.value.client = ''
+//     }
+//     if(!form.value.status.trim()){
+//      error.value.status = "Status is required"
+//      isValid = false
+//     } else {
+//         error.value.status = ''
+//     }
+//     if(!form.value.dueDate.trim()){
+//      error.value.dueDate = "Date is required"
+//      isValid = false
+//     } else {
+//         error.value.dueDate = ''
+//     }
+
+// return isValid;
+// }
   const store = useDashboardStore()
   const form = ref({
     name: '',
