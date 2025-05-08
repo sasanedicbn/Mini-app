@@ -127,36 +127,6 @@ const validateInputs = () => {
 };
 
 
-// const validateInputs = () => {
-//     let isValid = true;
-   
-//     if(!form.value.name.trim()){
-//      error.value.name = "Project name is required"
-//      isValid = false
-//     } else {
-//         error.value.name = ''
-//     }
-//     if(!form.value.client.trim()){
-//      error.value.client = "Client is required"
-//      isValid = false
-//     } else {
-//         error.value.client = ''
-//     }
-//     if(!form.value.status.trim()){
-//      error.value.status = "Status is required"
-//      isValid = false
-//     } else {
-//         error.value.status = ''
-//     }
-//     if(!form.value.dueDate.trim()){
-//      error.value.dueDate = "Date is required"
-//      isValid = false
-//     } else {
-//         error.value.dueDate = ''
-//     }
-
-// return isValid;
-// }
   const store = useDashboardStore()
   const form = ref({
     name: '',
