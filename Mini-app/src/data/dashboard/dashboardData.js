@@ -288,3 +288,21 @@ export const validationRules = {
     validate: (val) => val.trim() !== "",
   },
 };
+
+const validateInputs = () => {
+  let isValid = true;
+
+  for (const key in validationRules) {
+    const rule = validationRules[key];
+    const value = form.value[key];
+
+    if (!rule.validate(value)) {
+      error.value[key] = rule.message;
+      isValid = false;
+    } else {
+      error.value[key] = "";
+    }
+  }
+
+  return isValid;
+};
