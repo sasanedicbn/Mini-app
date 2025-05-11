@@ -10,7 +10,7 @@
         <ActionModal v-if="openModal" v-on:close="openModalHandler"/>
         <div class="table-search">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search projects..." @input="findProjects"/>
+          <input type="text" placeholder="Search projects..." v-model="searchQuery"/>
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in allProjects" :key="item.id">
+          <tr v-for="item in searchQueyFilter" :key="item.id">
             <td>
               <div class="project-info">
                 <div
@@ -86,25 +86,26 @@
 import ActionModal from '@/components/UX/Modals/ActionModal.vue';
 import { columns, data } from '@/data/dashboard/dashboardData';
 import { useDashboardStore } from '@/store/DashboardStore';
+import { computed } from 'vue';
 import { watch } from 'vue';
 import { ref } from 'vue';
 const store = useDashboardStore();
 
 const openModal = ref(false)
 
+const searchQuery = ref('')
 const allProjects = store.recentProjects
 
-const findProjects = (e) => {
-  console.log(e.target.value, 'value.target')
-  console.log(allProjects, 'allprrrrrr')
-}
+const searchQueyFilter = computed(() => {
+  return allProjects.filter((project) => project.name.toLowerCase().includes(searchQuery.value.toLowerCase()))
+})
 const openModalHandler = () => {
   openModal.value = !openModal.value;
 }
 
-watch(() => {
-  console.log(data, 'data iz dashboarda')
-}, data)
+watch(searchQuery, (newVal) => {
+  console.log('searchQuery:', newVal)
+})
 </script>
 
 <style scoped>
