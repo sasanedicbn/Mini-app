@@ -7,6 +7,7 @@
           <i class="fas fa-plus"></i>
           Add Project
         </button>
+        <ActionModal v-if="openModal" />
         <div class="table-search">
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Search projects..." />
@@ -82,6 +83,7 @@
 </template>
 
 <script setup>
+import ActionModal from '@/components/UX/Modals/ActionModal.vue';
 import { columns, data } from '@/data/dashboard/dashboardData';
 import { useDashboardStore } from '@/store/DashboardStore';
 import { watch } from 'vue';

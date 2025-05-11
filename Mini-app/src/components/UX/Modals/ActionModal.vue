@@ -77,6 +77,7 @@
         </div>
       </div>
     </div>
+    <div class="overlay"></div>
   </template>
   
   <script setup>
@@ -87,7 +88,7 @@
   import BaseDatePicker from '@/components/UX/Reusable/BaseDatePicker.vue';
   import {statuses} from '@/data/dashboard/dashboardData'
   import {clients} from '@/data/dashboard/dashboardData'
-  import {validateInputs} from '@/data/dashboard/dashboardHelpersFunctions'
+  import {validationRules} from '@/data/dashboard/dashboardData'
   import { useDashboardStore } from '@/store/DashboardStore';
 
   const store = useDashboardStore()
@@ -106,7 +107,7 @@
     dueDate: '',
   })
 
-   const validateInputs = () => {
+  const validateInputs = () => {
   let isValid = true;
 
   for (const key in validationRules) {
@@ -133,14 +134,20 @@
   
 <style scoped>
 .actionModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
   background: white;
   border-radius: 16px;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-  padding: 32px;
+  padding: 28px;
   max-width: 640px;
-  margin: 0 auto;
+  width: 100%;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
+
 
 .form-container {
   margin-top: 24px;
