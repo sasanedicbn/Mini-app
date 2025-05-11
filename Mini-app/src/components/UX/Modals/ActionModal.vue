@@ -147,7 +147,15 @@
   width: 100%;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
+ .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 10; 
+}
 
 .form-container {
   margin-top: 24px;

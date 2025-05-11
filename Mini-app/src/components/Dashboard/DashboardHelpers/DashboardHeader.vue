@@ -47,7 +47,6 @@ const toggleMenu = () => {
   padding: 1rem 2rem;
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  z-index: 100;
 }
 
 .header-left {
