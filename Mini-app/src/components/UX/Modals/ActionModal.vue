@@ -139,6 +139,7 @@
   const submitModal = () => {
     if(!validateInputs()) return 
     store.addNewProject(form.value)
+    emit('close')
   }
   </script>
   

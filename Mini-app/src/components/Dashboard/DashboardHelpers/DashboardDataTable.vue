@@ -10,7 +10,7 @@
         <ActionModal v-if="openModal" v-on:close="openModalHandler"/>
         <div class="table-search">
           <i class="fas fa-search"></i>
-          <input type="text" placeholder="Search projects..." />
+          <input type="text" placeholder="Search projects..." @input="findProjects"/>
         </div>
       </div>
     </div>
@@ -94,6 +94,10 @@ const openModal = ref(false)
 
 const allProjects = store.recentProjects
 
+const findProjects = (e) => {
+  console.log(e.target.value, 'value.target')
+  console.log(allProjects, 'allprrrrrr')
+}
 const openModalHandler = () => {
   openModal.value = !openModal.value;
 }
