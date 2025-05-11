@@ -84,10 +84,9 @@
 
 <script setup>
 import ActionModal from '@/components/UX/Modals/ActionModal.vue';
-import { columns, data } from '@/data/dashboard/dashboardData';
+import { columns,} from '@/data/dashboard/dashboardData';
 import { useDashboardStore } from '@/store/DashboardStore';
 import { computed } from 'vue';
-import { watch } from 'vue';
 import { ref } from 'vue';
 const store = useDashboardStore();
 
@@ -103,9 +102,6 @@ const openModalHandler = () => {
   openModal.value = !openModal.value;
 }
 
-watch(searchQuery, (newVal) => {
-  console.log('searchQuery:', newVal)
-})
 </script>
 
 <style scoped>
