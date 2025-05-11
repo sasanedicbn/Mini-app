@@ -67,7 +67,7 @@
         </div>
   
         <div class="action-buttons">
-          <button class="cancel-btn">Cancel</button>
+          <button class="cancel-btn" v-on:click="closeModal">Cancel</button>
           <button class="submit-btn" v-on:click="submitModal">
             <span>Create Project</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,7 +77,7 @@
         </div>
       </div>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay" v-on:click="closeModal"></div>
   </template>
   
   <script setup>
@@ -90,6 +90,16 @@
   import {clients} from '@/data/dashboard/dashboardData'
   import {validationRules} from '@/data/dashboard/dashboardData'
   import { useDashboardStore } from '@/store/DashboardStore';
+
+  const prosp = defineProps({
+    openModal: Boolean,
+  })
+
+  const emit = defineEmits(['close'])
+
+  const closeModal = () => {
+   emit('close')
+  }
 
   const store = useDashboardStore()
   const form = ref({

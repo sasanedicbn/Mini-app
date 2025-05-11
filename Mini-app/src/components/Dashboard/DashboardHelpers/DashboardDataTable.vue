@@ -7,7 +7,7 @@
           <i class="fas fa-plus"></i>
           Add Project
         </button>
-        <ActionModal v-if="openModal" />
+        <ActionModal v-if="openModal" v-on:close="openModalHandler"/>
         <div class="table-search">
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Search projects..." />
