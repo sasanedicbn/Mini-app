@@ -70,9 +70,10 @@
         <button class="pagination-btn" disabled>
           <i class="fas fa-chevron-left"></i>
         </button>
-        <button class="pagination-btn active">1</button>
+        <button class="pagination-btn" v-if="paginationBtns">{{ paginationBtns }}</button>
+        <!-- <button class="pagination-btn active">1</button>
         <button class="pagination-btn">2</button>
-        <button class="pagination-btn">3</button>
+        <button class="pagination-btn">3</button> -->
         <button class="pagination-btn">
           <i class="fas fa-chevron-right"></i>
         </button>
@@ -91,9 +92,16 @@ import { ref } from 'vue';
 const store = useDashboardStore();
 
 const openModal = ref(false)
+const currentPagination = ref(1)
+const itemsPerPage = ref(2)
 
 const searchQuery = ref('')
 const allProjects = store.recentProjects
+console.log(allProjects.length)
+
+const paginationBtns = computed(() => {
+  return Math.ceil(allProjects.length / itemsPerPage);
+})
 
 const searchQueyFilter = computed(() => {
   return allProjects.filter((project) => project.name.toLowerCase().includes(searchQuery.value.toLowerCase()))
