@@ -70,10 +70,9 @@
         <button class="pagination-btn" disabled>
           <i class="fas fa-chevron-left"></i>
         </button>
-        <button class="pagination-btn" v-for="paginationBtn of paginationBtns" >{{ paginationBtn }}</button>
-        <!-- <button class="pagination-btn active">1</button>
-        <button class="pagination-btn">2</button>
-        <button class="pagination-btn">3</button> -->
+        <button class="pagination-btn" v-for="paginationBtn of paginationBtns"
+         :class="{active: paginationBtn === currentPagination}" 
+         >{{ paginationBtn }}</button>
         <button class="pagination-btn">
           <i class="fas fa-chevron-right"></i>
         </button>
