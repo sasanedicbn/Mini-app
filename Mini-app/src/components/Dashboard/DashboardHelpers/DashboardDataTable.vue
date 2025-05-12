@@ -72,6 +72,7 @@
         </button>
         <button class="pagination-btn" v-for="paginationBtn of paginationBtns"
          :class="{active: paginationBtn === currentPagination}" 
+         @click="currentPagination === paginationBtn"
          >{{ paginationBtn }}</button>
         <button class="pagination-btn">
           <i class="fas fa-chevron-right"></i>
