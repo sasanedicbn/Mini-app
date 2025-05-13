@@ -1,13 +1,13 @@
 <template>
      <div class="pagination">
-        <button class="pagination-btn" disabled>
+        <button class="pagination-btn" :disabled="currentPage === 1">
           <i class="fas fa-chevron-left"></i>
         </button>
         <button class="pagination-btn" v-for="paginationBtn of paginationBtns"
          :class="{active: paginationBtn === currentPagination}" 
          @click="currentPagination = paginationBtn"
          >{{ paginationBtn }}</button>
-        <button class="pagination-btn">
+        <button class="pagination-btn"  :disabled="currentPagination === paginationBtns">
           <i class="fas fa-chevron-right"></i>
         </button>
       </div>
