@@ -66,7 +66,7 @@
       </table>
     </div>
     <div class="table-footer">
-     <Pagination paginationBtns="paginationBtns" currentPagination="currentPagination"/>
+     <Pagination :paginationBtns="paginationBtns" :currentPagination="currentPagination"/>
     </div>
 
   </div>
