@@ -20,6 +20,8 @@ const props = defineProps({
     currentPagination: Number,
 })
 const {paginationBtns, currentPagination} = props
+const emit = defineEmits(['page-changed']);
+
 </script>
 
 <style scoped>
