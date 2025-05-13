@@ -13,7 +13,13 @@
       </div>
 </template>
 
-<script>
+<script setup>
+
+const props = defineProps({
+    paginationBtns: Array,
+    currentPagination: Number,
+})
+const {paginationBtns, currentPagination} = props
 </script>
 
 <style scoped>
