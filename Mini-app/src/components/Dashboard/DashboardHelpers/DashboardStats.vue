@@ -8,7 +8,10 @@
         <h3 class="stat-title">{{ stat.title }}</h3>
         <p class="stat-value">{{ stat.value }}</p>
         <p
-          class="stat-c
+          class="stat-change"
+          :class="{ positive: stat.change > 0, negative: stat.change < 0 }"
+        >
+          <i
             :class="stat.change > 0 ? 'fas fa-arrow-up' : 'fas fa-arrow-down'"
           ></i>
           {{ Math.abs(stat.change) }}% vs last period
