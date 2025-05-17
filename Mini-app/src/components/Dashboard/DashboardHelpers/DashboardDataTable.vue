@@ -197,13 +197,6 @@ const openModalHandler = () => {
   background-color: #f8fafc;
 }
 
-.data-table td {
-  padding: 1rem;
-  font-size: 0.875rem;
-  color: #4a5568;
-  border-bottom: 1px solid #edf2f7;
-}
-
 .table-header-cell {
   display: flex;
   align-items: center;
