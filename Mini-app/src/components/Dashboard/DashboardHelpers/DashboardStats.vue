@@ -16,6 +16,10 @@
           ></i>
           {{ Math.abs(stat.change) }}% vs last period
         </p>
+      </div>
+    </div>
+  </div>
+</template>
 
 <script setup>
 import { useDashboardStore } from '@/store/DashboardStore'
