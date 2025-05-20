@@ -11,7 +11,10 @@
           class="stat-change"
           :class="{ positive: stat.change > 0, negative: stat.change < 0 }"
         >
-       s(stat.change) }}% vs last period
+          <i
+            :class="stat.change > 0 ? 'fas fa-arrow-up' : 'fas fa-arrow-down'"
+          ></i>
+          {{ Math.abs(stat.change) }}% vs last period
         </p>
       </div>
     </div>
