@@ -37,6 +37,15 @@ const formattedStats = computed(() => dashboardStore.getFormattedStats)
   gap: 1rem;
 }
 
+.stat-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
 
 .stat-icon {
   width: 2.5rem;
