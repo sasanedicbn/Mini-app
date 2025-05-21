@@ -7,6 +7,7 @@ import DashboardRecentActivity from "@/components/Dashboard/DashboardHelpers/Das
 import DashboardDataTable from "@/components/Dashboard/DashboardHelpers/DashboardDataTable.vue";
 import DashboardLayout from "@/components/Dashboard/DashboardLayout.vue";
 import DashboardChart from "@/components/Dashboard/DashboardHelpers/DashboardChart.vue";
+import DashboardCalender from "@/components/Dashboard/DashboardHelpers/DashboardCalendar.vue";
 
 const routes = [
   { path: "/", component: MainVue },
@@ -20,6 +21,7 @@ const routes = [
       { path: "message", component: DashboardRecentActivity },
       { path: "tasks", component: DashboardRecentActivity },
       { path: "overview", component: DashboardChart },
+      { path: "calendar", component: DashboardCalender },
     ],
   },
 ];
