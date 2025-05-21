@@ -197,7 +197,7 @@ export const navItems = [
   { name: "Tasks", path: "/dashboard/tasks", icon: "fas fa-tasks" },
   { name: "Calendar", path: "/dashboard/calendar", icon: "fas fa-calendar" },
   { name: "Messages", path: "/dashboard/messages", icon: "fas fa-envelope" },
-  { name: "Reports", path: "/dashboard/reports", icon: "fas fa-chart-bar" },
+  { name: "Overview", path: "/dashboard/overview", icon: "fas fa-chart-bar" },
   { name: "Settings", path: "/dashboard/settings", icon: "fas fa-cog" },
 ];
 
