@@ -14,6 +14,18 @@
      <div class="day"></div>
     </div>
   </template>
+
+  <script setup>
+import { reactive } from 'vue';
+
+  const months = reactive([
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+   ]);
+
+  const days = reactive(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
+  
+  </script>
   
   <style scoped>
   .calendar-grid{
