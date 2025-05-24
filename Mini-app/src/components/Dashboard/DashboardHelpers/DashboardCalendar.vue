@@ -1,9 +1,16 @@
 <template>
-    <div class="calendar-grid">
-     <div class="day" v-for="day of days" :key="day">{{ day }}</div>
-     
+    <div class="calendar-container">
+      <div class="month-label">{{ months[currentMonth] }} {{ currentYear }}</div>
+      <div class="calendar-grid">
+        <div class="day-name" v-for="day in days" :key="day">{{ day }}</div>
+        <div class="empty" v-for="n in startDay" :key="'empty-' + n"></div>
+        <div class="day" v-for="day in daysInMonth" :key="'day-' + day">
+          {{ day }}
+        </div>
+      </div>
     </div>
   </template>
+  
 
   <script setup>
 import { reactive } from 'vue';
