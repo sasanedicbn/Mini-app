@@ -36,44 +36,55 @@
   </script>
   
   
-  <style scoped>
-  .calendar-container {
-    width: 300px;
-    margin: 0 auto;
-    font-family: sans-serif;
-    color: #fff;
-  }
-  
-  .month-label {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    background-color: #1e1e1e;
-    gap: 5px;
-  }
-  
-  .day-name {
-    font-weight: bold;
-    text-align: center;
-    padding: 5px;
-    background-color: #333;
-  }
-  
-  .empty {
-    height: 40px;
-  }
-  
-  .day {
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    background-color: #555;
-    border-radius: 4px;
-  }
-  </style>
-  
+<style scoped>
+.calendar-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.month-label {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f1f5f9;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  background-color: #e2e8f0; 
+  border-radius: 4px;
+  color: #1e293b;
+}
+
+.empty {
+  height: 40px;
+}
+
+.day {
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #cbd5e1; 
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.day:hover {
+  background-color: #94a3b8; 
+  cursor: pointer;
+}
+</style>
