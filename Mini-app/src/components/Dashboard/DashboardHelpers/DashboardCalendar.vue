@@ -37,16 +37,43 @@
   
   
   <style scoped>
-  .calendar-grid{
+  .calendar-container {
+    width: 300px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    color: #fff;
+  }
+  
+  .month-label {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    background-color: blue;
-    height: 500px;
+    background-color: #1e1e1e;
+    gap: 5px;
   }
-  .day{
+  
+  .day-name {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    background-color: #333;
+  }
+  
+  .empty {
     height: 40px;
-    width: 40px;
-    border: 1px solid orange;
-    background-color: grey;
+  }
+  
+  .day {
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #555;
+    border-radius: 4px;
   }
   </style>
+  
