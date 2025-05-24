@@ -1,17 +1,7 @@
 <template>
     <div class="calendar-grid">
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
-     <div class="day"></div>
+     <div class="day" v-for="day of days" :key="day">{{ day }}</div>
+     
     </div>
   </template>
 
@@ -24,7 +14,7 @@ import { reactive } from 'vue';
    ]);
 
   const days = reactive(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
-  
+
   </script>
   
   <style scoped>
