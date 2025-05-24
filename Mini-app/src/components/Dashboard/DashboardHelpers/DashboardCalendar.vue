@@ -13,16 +13,28 @@
   
 
   <script setup>
-import { reactive } from 'vue';
-
-  const months = reactive([
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-   ]);
-
-  const days = reactive(["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"])
-
+  import { ref, computed } from 'vue'
+  
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ]
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  
+  const today = new Date()
+  const currentYear = today.getFullYear()
+  const currentMonth = today.getMonth()
+  
+  const daysInMonth = computed(() => {
+    return new Date(currentYear, currentMonth + 1, 0).getDate()
+  })
+  
+  const startDay = computed(() => {
+    let day = new Date(currentYear, currentMonth, 1).getDay()
+    return day === 0 ? 6 : day - 1 
+  })
   </script>
+  
   
   <style scoped>
   .calendar-grid{
