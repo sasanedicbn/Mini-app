@@ -29,7 +29,10 @@
     return new Date(currentYear, currentMonth + 1, 0).getDate()
   })
   
-
+  const startDay = computed(() => {
+    let day = new Date(currentYear, currentMonth, 1).getDay()
+    return day === 0 ? 6 : day - 1 
+  })
   </script>
   
   
