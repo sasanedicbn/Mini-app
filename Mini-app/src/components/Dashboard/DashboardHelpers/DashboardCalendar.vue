@@ -16,7 +16,8 @@
   import { ref, computed } from 'vue'
   
   const months = [
-    "Jecember"
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
   ]
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
   
