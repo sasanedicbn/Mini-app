@@ -54,7 +54,11 @@
 .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  background-color: #f1f5f
+  background-color: #f1f5f9;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .day-name {
