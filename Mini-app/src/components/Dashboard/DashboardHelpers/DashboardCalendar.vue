@@ -25,14 +25,7 @@
   const currentYear = today.getFullYear()
   const currentMonth = today.getMonth()
   
-  const daysInMonth = computed(() => {
-    return new Date(currentYear, currentMonth + 1, 0).getDate()
-  })
-  
-  const startDay = computed(() => {
-    let day = new Date(currentYear, currentMonth, 1).getDay()
-    return day === 0 ? 6 : day - 1 
-  })
+  const daysInMonth =
   </script>
   
   
