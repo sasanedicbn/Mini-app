@@ -60,6 +60,13 @@
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+
+.day-name {
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  background-color: #e2e8f0; 
+  border-radius: 4px;
   color: #1e293b;
 }
 
