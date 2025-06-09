@@ -44,7 +44,12 @@
   color: #333;
 }
 
-
+.month-label {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
 
 .calendar-grid {
   display: grid;
