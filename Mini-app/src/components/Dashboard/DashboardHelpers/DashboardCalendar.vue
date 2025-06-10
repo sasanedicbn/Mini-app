@@ -19,6 +19,7 @@
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ]
+  const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
   
   const today = new Date()
   const currentYear = today.getFullYear()
