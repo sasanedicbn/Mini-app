@@ -29,15 +29,17 @@
     return new Date(currentYear, currentMonth + 1, 0).getDate()
   })
   
-  const startDay = computed(() => {
-    let day = new Date(currentYear, currentMonth, 1).getDay()
-    return day === 0 ? 6 : day - 1 
-  })
+
   </script>
   
   
 <style scoped>
-
+.calendar-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #333;
+}
 
 .month-label {
   text-align: center;
