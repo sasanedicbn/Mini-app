@@ -34,7 +34,14 @@
   
   
 <style scoped>
+.calendar-container {
+  width: 100%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  color: #333;
+}
 
+.month-label {
   text-align: center;
   font-size: 20px;
   margin-bottom: 10px;
