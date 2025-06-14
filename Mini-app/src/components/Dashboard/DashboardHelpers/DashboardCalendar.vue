@@ -21,13 +21,7 @@
   ]
   const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
   
-  const today = new Date()
-  const currentYear = today.getFullYear()
-  const currentMonth = today.getMonth()
-  
-  const daysInMonth = computed(() => {
-    return new Date(currentYear, currentMonth + 1, 0).getDate()
-  })
+ 
   
 
   </script>
